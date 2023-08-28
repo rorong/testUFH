@@ -1,0 +1,26 @@
+.container-fluid
+  .page-titles
+    %ol.breadcrumb
+      %li.breadcrumb-item
+        %a{:href => "javascript:void(0)"} Table
+      %li.breadcrumb-item.active
+        %a{:href => "javascript:void(0)"} Billing
+  .row
+    .col-12
+      .card
+        .card-header
+          %h4.card-title Billing
+        .card-body
+          .table-responsive
+            %table#example3.display.min-w850
+              %thead
+                %tr
+                  %th Transaction ID
+                  %th Created At
+                  %th Status
+              %tbody
+                - @payments.each do |payment|
+                  %tr
+                    %td= payment.transaction_id
+                    %td= payment.created_at
+                    %td= payment.status

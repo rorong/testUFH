@@ -1,0 +1,42 @@
+= form_for user, data: {turbo: false} do |f|
+  .form-row
+    .form-group.col-md-6
+      = f.label :first_name
+      = f.text_field :first_name, class:"form-control", placeholder: "First Name", required: true
+    .form-group.col-md-6
+      = f.label :last_name
+      = f.text_field :last_name, class:"form-control", placeholder: "Last Name", required: true
+    .form-group.col-md-6
+      = f.label :email
+      = f.email_field :email, class:"form-control", placeholder: "Email", required: true
+    .form-group.col-md-6
+      = f.label :phone_number
+      = f.telephone_field :phone_number, class:"form-control", placeholder: "Phone Number", required: true
+    .form-row.col-12
+      .form-group.col-md-6
+        = f.label :city
+        = f.text_field :city, class:"form-control", placeholder: "City", required: true
+      .form-group.col-md-4
+        = f.label :state
+        = f.text_field :state, class:"form-control", placeholder: "State", required: true
+      .form-group.col-md-2
+        = f.label :zip_code
+        = f.text_field :zip_code, class:"form-control", placeholder: "Zip Code", required: true
+    .form-group.col-md-12
+      = f.label :industry
+      = f.select :industry, options_for_select(User::INDUSTRY_OPTIONS, selected: f.object.industry), {include_blank: '-- Select a Industry --'}, class:"form-control", required: true
+    .form-group.col-md-12
+      = f.label :biography
+      = f.text_area :biography, class:"form-control", placeholder: "Biography", required: true
+    / .form-group.col-md-6
+    /   .custom-control.custom-checkbox
+    /     = f.check_box :first_attempt, id:"customCheckBoxFirstAttempt", class: "custom-control-input", type: 'checkbox'
+    /     = f.label :first_attempt, class: "custom-control-label", :for => "customCheckBoxFirstAttempt"
+    / .form-group.col-md-6
+    /   .custom-control.custom-checkbox
+    /     = f.check_box :public, id:"customCheckBoxPublic", class: "custom-control-input", type: 'checkbox'
+    /     = f.label :public, class: "custom-control-label", :for => "customCheckBoxPublic"
+    .form-group.custom-file
+      =f.label :avatar, class: "col-lg-6 col-form-label custom-file-label"
+      = f.file_field :avatar, placeholder: "Avatar", class: "custom-file-input"
+  =f.submit "Update", class: "btn btn-warning my-4 text-white"

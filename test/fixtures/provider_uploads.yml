@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email_address: MyString
+  row_count: 1
+  completed_count: 1
+  error_count: 1
+  ouput_file: MyString
+
+two:
+  email_address: MyString
+  row_count: 1
+  completed_count: 1
+  error_count: 1
+  ouput_file: MyString

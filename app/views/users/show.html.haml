@@ -1,0 +1,119 @@
+.container-fluid
+  .page-titles
+    %ol.breadcrumb
+      %li.breadcrumb-item
+        %a{:href => "javascript:void(0)"} User
+      %li.breadcrumb-item.active
+        %a{:href => "javascript:void(0)"} Profile
+  / row
+  .row
+    = render "users/user_profile", user: @user
+    = render "users/posts", posts: Post.latest
+    .col
+      .col-xl-12
+        .card
+          .card-body
+            .profile-tab
+              .custom-tab-1
+                %ul.nav.nav-tabs
+                  %li.nav-item
+                    %a.nav-link.active.show{"data-toggle" => "tab", :href => "#profile-show"} About Me
+                  %li.nav-item
+                    %a.nav-link{"data-toggle" => "tab", :href => "#profile-edit"} Setting
+                .tab-content
+                  #profile-show.tab-pane.fade.active.show
+                    .profile-about-me
+                      .card-body.pb-0
+                        %p= @user.biography
+                        .profile-skills.mb-5
+                          %h4.text-warning.mb-2 Skills
+                          %a.btn.btn-warning.light.btn-xs.mb-1{:href => "javascript:void()"} Admin
+                          %a.btn.btn-warning.light.btn-xs.mb-1{:href => "javascript:void()"} Dashboard
+                          %a.btn.btn-warning.light.btn-xs.mb-1{:href => "javascript:void()"} Photoshop
+                          %a.btn.btn-warning.light.btn-xs.mb-1{:href => "javascript:void()"} Bootstrap
+                          %a.btn.btn-warning.light.btn-xs.mb-1{:href => "javascript:void()"} Responsive
+                          %a.btn.btn-warning.light.btn-xs.mb-1{:href => "javascript:void()"} Crypto
+                        .profile-lang.mb-5
+                          %h4.text-warning.mb-2 Industry
+                          %a.text-muted.pr-3.f-s-16{:href => "javascript:void()"}
+                            %i.flag-icon.flag-icon-us
+                            =@user.industry
+                          / %a.text-muted.pr-3.f-s-16{:href => "javascript:void()"}
+                          /   %i.flag-icon.flag-icon-fr
+                          /   French
+                          / %a.text-muted.pr-3.f-s-16{:href => "javascript:void()"}
+                          /   %i.flag-icon.flag-icon-bd
+                          /   Bangla
+                          %br
+                          %br
+                          .profile-personal-info.mb-2
+                            %h4.text-warning.mb-4 Personal Information
+                            .row.mb-2
+                              .col-sm-4.col-5
+                                %h5.f-w-500
+                                  First Name
+                                  %span.pull-right :
+                              .col-sm-8.col-7
+                                %span=@user.first_name
+                            .row.mb-2
+                              .col-sm-4.col-5
+                                %h5.f-w-500
+                                  Last Name
+                                  %span.pull-right :
+                              .col-sm-8.col-7
+                                %span=@user.last_name
+                            .row.mb-2
+                              .col-sm-4.col-5
+                                %h5.f-w-500
+                                  Email
+                                  %span.pull-right :
+                              .col-sm-8.col-7
+                                %span=@user.email
+                            .row.mb-2
+                              .col-sm-4.col-5
+                                %h5.f-w-500
+                                  Phone Number
+                                  %span.pull-right :
+                              .col-sm-8.col-7
+                                %span=@user.phone_number
+                            .row.mb-2
+                              .col-sm-4.col-5
+                                %h5.f-w-500
+                                  City
+                                  %span.pull-right :
+                              .col-sm-8.col-7
+                                %span=@user.city
+                            .row.mb-2
+                              .col-sm-4.col-5
+                                %h5.f-w-500
+                                  State
+                                  %span.pull-right :
+                              .col-sm-8.col-7
+                                %span=@user.state
+                            .row.mb-2
+                              .col-sm-4.col-5
+                                %h5.f-w-500
+                                  Zip Code
+                                  %span.pull-right :
+                              .col-sm-8.col-7
+                                %span=@user.zip_code
+                            / .row.mb-2
+                            /   .col-sm-4.col-5
+                            /     %h5.f-w-500
+                            /       Industry
+                            /       %span.pull-right :
+                            /   .col-sm-8.col-7
+                            /     %span=@user.industry
+                            / .row.mb-2
+                            /   .col-sm-4.col-5
+                            /     %h5.f-w-500
+                            /       Biography
+                            /       %span.pull-right :
+                            /   .col-sm-8.col-7
+                            /     %span=@user.biography
+
+                  #profile-edit.tab-pane.fade
+                    .pt-4
+                      .settings-form.pb-3
+                        %h4.text-warning Account Setting
+                      =render "users/form", user: @user

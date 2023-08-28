@@ -1,0 +1,33 @@
+.container.h-100
+  .row.justify-content-center.h-100.align-items-center
+    .col-md-6
+      .authincation-content
+        .row.no-gutters
+          .col-xl-12
+            .auth-form
+              .text-center.mb-3
+                %a{:href => "index.html"}
+                  %img{:alt => "", :src => "images/logo-full.png"}/
+              %h4.text-center.mb-4.text-white Sign in your account
+              %form{:action => "index.html"}
+                .form-group
+                  %label.mb-1.text-white
+                    %strong Email
+                  %input.form-control{:type => "email", :value => "hello@example.com"}/
+                .form-group
+                  %label.mb-1.text-white
+                    %strong Password
+                  %input.form-control{:type => "password", :value => "Password"}/
+                .form-row.d-flex.justify-content-between.mt-4.mb-2
+                  .form-group
+                    .custom-control.custom-checkbox.ml-1.text-white
+                      %input#basic_checkbox_1.custom-control-input{:type => "checkbox"}/
+                      %label.custom-control-label{:for => "basic_checkbox_1"} Remember my preference
+                  .form-group
+                    %a.text-white{:href => "page-forgot-password.html"} Forgot Password?
+                .text-center
+                  %button.btn.bg-white.text-warning.btn-block{:type => "submit"} Sign Me In
+              .new-account.mt-3
+                %p.text-white
+                  Don't have an account?
+                  %a.text-white{:href => "./page-register.html"} Sign up

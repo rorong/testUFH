@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  author: MyString
+  asset_count: 1
+  learn: MyText
+  description: MyText
+  requirements: MyText
+
+two:
+  name: MyString
+  author: MyString
+  asset_count: 1
+  learn: MyText
+  description: MyText
+  requirements: MyText

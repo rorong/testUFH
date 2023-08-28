@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "metismenu": "^3.0.7",
+    "perfect-scrollbar": "^1.5.5",
+    "rails_admin": "3.1.2",
+    "sass": "^1.61.0"
+  },
+  "scripts": {
+    "build:css": "sass ./app/assets/stylesheets/application.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules ./app/assets/stylesheets/rails_admin.scss:./app/assets/builds/rails_admin.css --no-source-map --load-path=node_modules"
+  }
+}

@@ -1,0 +1,18 @@
+.container.h-100
+  .row.justify-content-center.h-100.align-items-center
+    .col-md-6.m-auto
+      .authincation-content.mt-5.mb-3
+        .row.no-gutters{ style: "margin-top:10rem;" }
+          .col-xl-12
+            .auth-form
+              %div.text-center
+                .mb-3
+                  =image_tag "logo-full.png"
+              %h4.text-center.mb-4.text-white Forgot Your Password?
+              = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+                .form-group
+                  = f.email_field :email, class: "form-control mb-1", placeholder: "Email"
+                .text-center
+                  = f.submit 'Send me reset password instructions', data: {turbo: false}, class: "btn bg-white text-warning btn-block"
+                .text-center.mt-2
+                  = link_to 'Log In', new_user_session_path, data: {turbo: false}, class: "text-white"

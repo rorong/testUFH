@@ -1,0 +1,30 @@
+.container.h-100
+  .row.justify-content-center.h-100.align-items-center
+    .col-md-6
+      .authincation-content
+        .row.no-gutters
+          .col-xl-12
+            .auth-form
+              .text-center.mb-3
+                %a{:href => "index.html"}
+                  %img{:alt => "", :src => "images/logo-full.png"}/
+              %h4.text-center.mb-4.text-white Sign up your account
+              %form{:action => "index.html"}
+                .form-group
+                  %label.mb-1.text-white
+                    %strong Username
+                  %input.form-control{:placeholder => "username", :type => "text"}/
+                .form-group
+                  %label.mb-1.text-white
+                    %strong Email
+                  %input.form-control{:placeholder => "hello@example.com", :type => "email"}/
+                .form-group
+                  %label.mb-1.text-white
+                    %strong Password
+                  %input.form-control{:type => "password", :value => "Password"}/
+                .text-center.mt-4
+                  %button.btn.bg-white.text-warning.btn-block{:type => "submit"} Sign me up
+              .new-account.mt-3
+                %p.text-white
+                  Already have an account?
+                  %a.text-white{:href => "page-login.html"} Sign in

@@ -1,0 +1,2 @@
+class ProviderUpload < ApplicationRecord
+end

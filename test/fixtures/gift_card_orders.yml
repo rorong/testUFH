@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  grocery_gift_card: one
+  status: false
+  store: MyString
+
+two:
+  user: two
+  grocery_gift_card: two
+  status: false
+  store: MyString

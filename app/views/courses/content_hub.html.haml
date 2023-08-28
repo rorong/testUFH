@@ -1,0 +1,286 @@
+
+#aAddDietMenus.modal.fade
+  .modal-dialog.modal-dialog-centered{:role => "document"}
+    .modal-content
+      .modal-header
+        %h5.modal-title Diet Menus
+        %button.close{"data-dismiss" => "modal", :type => "button"}
+          %span ×
+      .modal-body
+        %form
+          .form-group
+            %label Running
+            %input.form-control{:placeholder => "Km", :type => "text"}/
+          .form-group
+            %label Cycling
+            %input.form-control{:placeholder => "Km", :type => "text"}/
+          .form-group
+            %label Yoga
+            %input.form-control{:placeholder => "hr", :type => "text"}/
+          %button.btn.btn-warning Submit
+
+.container-fluid
+  .row
+    .card-body.p-4
+      .bootstrap-carousel
+        #carouselExampleCaptions.carousel.slide{"data-ride" => "carousel"}
+          %ol.carousel-indicators
+            %li.active{"data-slide-to" => "0", "data-target" => "#carouselExampleCaptions"}
+            %li{"data-slide-to" => "1", "data-target" => "#carouselExampleCaptions"}
+            %li{"data-slide-to" => "2", "data-target" => "#carouselExampleCaptions"}
+          .carousel-inner
+            .carousel-item.active
+              = image_tag "img5.jpg", classl: "d-block", style: "width: 100%"
+              .carousel-caption.d-none.d-md-block
+                %h5 First slide label
+                %p Nulla vitae elit libero, a pharetra augue mollis interdum.
+            .carousel-item
+              = image_tag "img6.jpg", classl: "d-block", style: "width: 100%"
+              .carousel-caption.d-none.d-md-block
+                %h5 Second slide label
+                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            .carousel-item
+              = image_tag "img7.jpg", classl: "d-block", style: "width: 100%"
+              .carousel-caption.d-none.d-md-block
+                %h5 Third slide label
+                %p
+                  Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          %a.carousel-control-prev{"data-slide" => "prev", :href => "#carouselExampleCaptions"}
+            %span.carousel-control-prev-icon
+            %span.sr-only Previous
+          %a.carousel-control-next{"data-slide" => "next", :href => "#carouselExampleCaptions"}
+            %span.carousel-control-next-icon
+            %span.sr-only Next
+
+  .row
+    .col-xl-9.col-xxl-8
+      .row
+        .col-xl-12
+          .card
+            .card-header.d-block.pb-0.border-0
+              .d-sm-flex.flex-wrap.align-items-center.d-block.mb-md-3.mb-0
+                .mr-auto.mb-3
+                  %h4.text-black.fs-20 Diet Menus
+                  %p.fs-13.mb-0.text-black Lorem ipsum dolor sit amet, consectetur
+                .input-group.mb-3.diet-search.mr-4
+                  %input.form-control{:placeholder => "Search Menus here", :type => "text"}
+                    .input-group-append
+                      %button.btn.btn-warning{:type => "button"}
+                        %i.fa.fa-search{"aria-hidden" => "true"}
+                %a.btn.rounded.btn-primary.mb-3{:href => "javascript:void(0);"}
+                  %svg.mr-2{:fill => "none", :height => "24", :viewBox => "0 0 25 24", :width => "25"}>
+                    %path{:d => "M3.31615 6H14.4744C14.4744 6.53043 14.6882 7.03914 15.0686 7.41421C15.4491 7.78929 15.9651 8 16.5032 8H18.532C19.07 8 19.5861 7.78929 19.9665 7.41421C20.347 7.03914 20.5607 6.53043 20.5607 6H21.5751C21.8442 6 22.1022 5.89464 22.2924 5.70711C22.4827 5.51957 22.5895 5.26522 22.5895 5C22.5895 4.73478 22.4827 4.48043 22.2924 4.29289C22.1022 4.10536 21.8442 4 21.5751 4H20.5607C20.5607 3.46957 20.347 2.96086 19.9665 2.58579C19.5861 2.21071 19.07 2 18.532 2H16.5032C15.9651 2 15.4491 2.21071 15.0686 2.58579C14.6882 2.96086 14.4744 3.46957 14.4744 4H3.31615C3.04711 4 2.7891 4.10536 2.59887 4.29289C2.40863 4.48043 2.30176 4.73478 2.30176 5C2.30176 5.26522 2.40863 5.51957 2.59887 5.70711C2.7891 5.89464 3.04711 6 3.31615 6ZM16.5032 4H18.532V5V6H16.5032V4ZM21.5751 11H12.4456C12.4456 10.4696 12.2319 9.96086 11.8514 9.58579C11.471 9.21071 10.9549 9 10.4169 9H8.38809C7.85002 9 7.334 9.21071 6.95353 9.58579C6.57306 9.96086 6.35931 10.4696 6.35931 11H3.31615C3.04711 11 2.7891 11.1054 2.59887 11.2929C2.40863 11.4804 2.30176 11.7348 2.30176 12C2.30176 12.2652 2.40863 12.5196 2.59887 12.7071C2.7891 12.8946 3.04711 13 3.31615 13H6.35931C6.35931 13.5304 6.57306 14.0391 6.95353 14.4142C7.334 14.7893 7.85002 15 8.38809 15H10.4169C10.9549 15 11.471 14.7893 11.8514 14.4142C12.2319 14.0391 12.4456 13.5304 12.4456 13H21.5751C21.8442 13 22.1022 12.8946 22.2924 12.7071C22.4827 12.5196 22.5895 12.2652 22.5895 12C22.5895 11.7348 22.4827 11.4804 22.2924 11.2929C22.1022 11.1054 21.8442 11 21.5751 11ZM8.38809 13V11H10.4169V12V13H8.38809ZM21.5751 18H18.532C18.532 17.4696 18.3182 16.9609 17.9378 16.5858C17.5573 16.2107 17.0413 16 16.5032 16H14.4744C13.9364 16 13.4203 16.2107 13.0399 16.5858C12.6594 16.9609 12.4456 17.4696 12.4456 18H3.31615C3.04711 18 2.7891 18.1054 2.59887 18.2929C2.40863 18.4804 2.30176 18.7348 2.30176 19C2.30176 19.2652 2.40863 19.5196 2.59887 19.7071C2.7891 19.8946 3.04711 20 3.31615 20H12.4456C12.4456 20.5304 12.6594 21.0391 13.0399 21.4142C13.4203 21.7893 13.9364 22 14.4744 22H16.5032C17.0413 22 17.5573 21.7893 17.9378 21.4142C18.3182 21.0391 18.532 20.5304 18.532 20H21.5751C21.8442 20 22.1022 19.8946 22.2924 19.7071C22.4827 19.5196 22.5895 19.2652 22.5895 19C22.5895 18.7348 22.4827 18.4804 22.2924 18.2929C22.1022 18.1054 21.8442 18 21.5751 18ZM14.4744 20V18H16.5032V19V20H14.4744Z", :fill => "#fff"}
+                  Filter
+              %a.btn.btn-warning.mr-3.mb-2{:href => "javascript:void(0)"} Recomended for you
+              %a.btn.btn-warning.light.mr-3.mb-2{:href => "javascript:void(0)"} Salad
+              %a.btn.btn-warning.light.mr-3.mb-2{:href => "javascript:void(0)"} Breakfast
+              %a.btn.btn-warning.light.mb-2{:href => "javascript:void(0)"} Lunch
+
+            #DietMenusContent.card-body.loadmore-content.dz-scroll.height750
+              .media.border-bottom.mb-3.pb-3.d-lg-flex.d-block.menu-list
+                %a{:href => "ecom-product-detail.html"}
+                  = image_tag "content/content-4.png", class: "rounded mr-3 mb-md-0 mb-3", :width => "120"
+                  .media-body.col-lg-8.pl-0
+                    %h6.fs-16.font-w600
+                      %a.text-black{:href => "ecom-product-detail.html"} Papaya Fruit for Vitamin C
+                    %p.fs-14 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    .d-flex.flex-wrap.align-items-center
+                      .d-flex.mb-sm-2.mb-3.pr-3.mr-auto.align-items-center
+                        = image_tag "content/content-profile-34.png", class:"rounded-circle mr-2", width: "30"
+                        %span.fs-14.text-black.font-w500 Andrew Sceenshaver
+                      %ul.d-flex.flex-wrap.mb-sm-0.mb-2
+                        %li.mb-2.mr-4.text-nowrap
+                          %i.las.la-clock.scale5.mr-2
+                          %span.fs-14.text-black.text-nowrap.font-w500 4-6 mins
+                        %li.mb-2.mr-4.text-nowrap
+                          %i.las.la-prescription-bottle.scale5.mr-2
+                          %span.text-nowrap.fs-14.text-black.font-w500 5 Ingridients
+                        %li.text-nowrap.mb-2
+                          %i.fa-regular.fa-star-o.mr-2.scale5.text-warning{"aria-hidden" => "true"}
+                          %span.text-nowrap.fs-14.text-black.font-w500 568 Reviews
+                  %a.btn.btn-warning.light.btn-md.ml-auto{"data-target" => "#aAddDietMenus", "data-toggle" => "modal", :href => "javascript:void(0);"}
+                    %i.fa.fa-plus.scale5.mr-3>
+                    Add Menu
+              .media.border-bottom.mb-3.pb-3.d-lg-flex.d-block.menu-list
+                %a{:href => "ecom-product-detail.html"}
+                  = image_tag "content/content-5.png", class: "rounded mr-3 mb-md-0 mb-3", :width => "120"
+                  .media-body.col-lg-8.pl-0
+                    %h6.fs-16.font-w600
+                      %a.text-black{:href => "ecom-product-detail.html"} Vitamin C Vegetables
+                    %p.fs-14 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    .d-flex.flex-wrap.align-items-center
+                      .d-flex.mb-sm-2.mb-3.pr-3.mr-auto.align-items-center
+                        = image_tag "content/content-profile-31.png", class:"rounded-circle mr-2", width: "30"
+                        %span.fs-14.text-black.font-w500 Tiffany Lawrenc
+                      %ul.d-flex.flex-wrap.mb-sm-0.mb-2
+                        %li.mb-2.mr-4.text-nowrap
+                          %i.las.la-clock.scale5.mr-2
+                          %span.fs-14.text-black.text-nowrap.font-w500 4-6 mins
+                        %li.mb-2.mr-4.text-nowrap
+                          %i.las.la-prescription-bottle.scale5.mr-2
+                          %span.text-nowrap.fs-14.text-black.font-w500 5 Ingridients
+                        %li.text-nowrap.mb-2
+                          %i.fa-regular.fa-star-o.mr-2.scale5.text-warning{"aria-hidden" => "true"}
+                          %span.text-nowrap.fs-14.text-black.font-w500 568 Reviews
+                  %a.btn.btn-warning.light.btn-md.ml-auto{"data-target" => "#aAddDietMenus", "data-toggle" => "modal", :href => "javascript:void(0);"}
+                    %i.fa.fa-plus.scale5.mr-3>
+                    Add Menu
+              .media.border-bottom.mb-3.pb-3.d-lg-flex.d-block.menu-list
+                %a{:href => "ecom-product-detail.html"}
+                  = image_tag "content/content-6.png", class: "rounded mr-3 mb-md-0 mb-3", :width => "120"
+                  .media-body.col-lg-8.pl-0
+                    %h6.fs-16.font-w600
+                      %a.text-black{:href => "ecom-product-detail.html"} Fresh or Frozen (No Sugar Added) Fruits
+                    %p.fs-14 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    .d-flex.flex-wrap.align-items-center
+                      .d-flex.mb-sm-2.mb-3.pr-3.mr-auto.align-items-center
+                        = image_tag "content/content-profile-32.png", class:"rounded-circle mr-2", width: "30"
+                        %span.fs-14.text-black.font-w500 Budy Khan
+                      %ul.d-flex.flex-wrap.mb-sm-0.mb-2
+                        %li.mb-2.mr-4.text-nowrap
+                          %i.las.la-clock.scale5.mr-2
+                          %span.fs-14.text-black.text-nowrap.font-w500 4-6 mins
+                        %li.mb-2.mr-4.text-nowrap
+                          %i.las.la-prescription-bottle.scale5.mr-2
+                          %span.text-nowrap.fs-14.text-black.font-w500 5 Ingridients
+                        %li.text-nowrap.mb-2
+                          %i.fa-regular.fa-star-o.mr-2.scale5.text-warning{"aria-hidden" => "true"}
+                          %span.text-nowrap.fs-14.text-black.font-w500 568 Reviews
+                  %a.btn.btn-warning.light.btn-md.ml-auto{"data-target" => "#aAddDietMenus", "data-toggle" => "modal", :href => "javascript:void(0);"}
+                    %i.fa.fa-plus.scale5.mr-3>
+                    Add Menu
+              .media.border-bottom.mb-3.pb-3.d-lg-flex.d-block.menu-list
+                %a{:href => "ecom-product-detail.html"}
+                  = image_tag "content/content-7.png", class: "rounded mr-3 mb-md-0 mb-3", :width => "120"
+                  .media-body.col-lg-8.pl-0
+                    %h6.fs-16.font-w600
+                      %a.text-black{:href => "ecom-product-detail.html"} Fresh Blueberry  Strawberry Dice
+                    %p.fs-14 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    .d-flex.flex-wrap.align-items-center
+                      .d-flex.mb-sm-2.mb-3.pr-3.mr-auto.align-items-center
+                        = image_tag "content/content-profile-33.png", class:"rounded-circle mr-2", width: "30"
+                        %span.fs-14.text-black.font-w500 Louis Montana
+                      %ul.d-flex.flex-wrap.mb-sm-0.mb-2
+                        %li.mb-2.mr-4.text-nowrap
+                          %i.las.la-clock.scale5.mr-2
+                          %span.fs-14.text-black.text-nowrap.font-w500 4-6 mins
+                        %li.mb-2.mr-4.text-nowrap
+                          %i.las.la-prescription-bottle.scale5.mr-2
+                          %span.text-nowrap.fs-14.text-black.font-w500 5 Ingridients
+                        %li.text-nowrap.mb-2
+                          %i.fa-regular.fa-star-o.mr-2.scale5.text-warning{"aria-hidden" => "true"}
+                          %span.text-nowrap.fs-14.text-black.font-w500 568 Reviews
+                  %a.btn.btn-warning.light.btn-md.ml-auto{"data-target" => "#aAddDietMenus", "data-toggle" => "modal", :href => "javascript:void(0);"}
+                    %i.fa.fa-plus.scale5.mr-3>
+                    Add Menu
+              .media.border-bottom.mb-3.pb-3.d-lg-flex.d-block.menu-list
+                %a{:href => "ecom-product-detail.html"}
+                  = image_tag "content/content-4.png", class: "rounded mr-3 mb-md-0 mb-3", :width => "120"
+                  .media-body.col-lg-8.pl-0
+                    %h6.fs-16.font-w600
+                      %a.text-black{:href => "ecom-product-detail.html"} Fresh or Frozen (No Sugar Added) Fruits
+                    %p.fs-14 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    .d-flex.flex-wrap.align-items-center
+                      .d-flex.mb-sm-2.mb-3.pr-3.mr-auto.align-items-center
+                        = image_tag "content/content-profile-32.png", class:"rounded-circle mr-2", width: "30"
+                        %span.fs-14.text-black.font-w500 Budy Khan
+                      %ul.d-flex.flex-wrap.mb-sm-0.mb-2
+                        %li.mb-2.mr-4.text-nowrap
+                          %i.las.la-clock.scale5.mr-2
+                          %span.fs-14.text-black.text-nowrap.font-w500 4-6 mins
+                        %li.mb-2.mr-4.text-nowrap
+                          %i.las.la-prescription-bottle.scale5.mr-2
+                          %span.text-nowrap.fs-14.text-black.font-w500 5 Ingridients
+                        %li.text-nowrap.mb-2
+                          %i.fa-regular.fa-star-o.mr-2.scale5.text-warning{"aria-hidden" => "true"}
+                          %span.text-nowrap.fs-14.text-black.font-w500 568 Reviews
+                  %a.btn.btn-warning.light.btn-md.ml-auto{"data-target" => "#aAddDietMenus", "data-toggle" => "modal", :href => "javascript:void(0);"}
+                    %i.fa.fa-plus.scale5.mr-3>
+                    Add Menu
+            .card-footer.style-1.text-center.border-0.pt-0.pb-4
+              %a#DietMenus.text-warning.dz-load-more.fa.fa-chevron-down{:href => "javascript:void(0);", :rel => "ajax/food-menu-list.html"}
+    .col-xl-3.col-xxl-4
+      .row
+        .col-xl-12.col-md-6
+          .card
+            .card-header.border-0
+              .mr-auto.pr-3
+                %h4.text-black.fs-20 Current Diet Menu
+                %p.fs-13.mb-0 Lorem ipsum dolor sit ame
+              %a.plus-icon.text-white.rounded.bg-warning{"data-target" => "#aAddDietMenus", "data-toggle" => "modal", :href => "javascript:void(0);"}
+                %i.fa.fa-plus.scale-2
+            .card-body
+              .media.mb-3
+                %a{:href => "ecom-product-detail.html"}
+                  = image_tag "content/content-menu-8.png", class: "rounded mr-3", :width => "86"
+                  .media-body
+                    %h6.fs-16.font-w500
+                      %a.text-black{:href => "ecom-product-detail.html"} Hearty Italian-Style White Bean Soup
+                    %span.fs-14 by Andrew
+              %ul.m-md-auto.mt-2.pr-4
+                %li.mb-2.text-nowrap
+                  %i.las.la-clock.scale5.mr-3
+                  %span.fs-14.text-black.text-nowrap.font-w500 4-6 mins
+                %li.mb-2.text-nowrap
+                  %i.las.la-calendar-alt.scale5.mr-3
+                  %span.fs-14.text-black.font-w500 Breakfast (Monday, Tuesday)
+                %li.mb-2.text-nowrap
+                  %i.las.la-prescription-bottle.scale5.mr-3
+                  %span.text-nowrap.fs-14.text-warning.font-w500 8 Ingridients
+      .col-xl-12.col-md-6
+        .card
+          .card-header.d-sm-flex.d-block.border-0.pb-4
+            .mr-auto.pr-3
+              %h4.text-black.fs-20 Trending Ingridients
+              %p.fs-13.mb-0 Lorem ipsum dolor sit amet, consectetur
+          #TrendingIngridientsContent.card-body.loadmore-content.dz-scroll.pb-0.pt-0.height320.ps.ps--active-y
+            .media.border-bottom.py-3
+              %a{:href => "ecom-product-detail.html"}
+                = image_tag "content/content-menu-9.png", class: "rounded mr-3", :width => "50"
+                .pr-3.mr-auto.media-body
+                  %h6.fs-16.font-w600.mb-0
+                    %a.text-black{:href => "ecom-product-detail.html"} Strawberry Fruit
+                  %span.fs-12 Vitamin A, B, C
+                .text-center
+                  %span.d-block
+                    %svg{:fill => "none", :height => "9", :viewBox => "0 0 18 9", :width => "19"}
+                      %path{:d => "M9 0L0 9H18L9 0Z", :fill => "#6EC51E"}
+                  %span.d-block.fs-16.text-black.font-w600 #1
+            .media.border-bottom.py-3
+              %a{:href => "ecom-product-detail.html"}
+                = image_tag "content/content-menu-10.png", class: "rounded mr-3", :width => "50"
+                .pr-3.mr-auto.media-body
+                  %h6.fs-16.font-w600.mb-0
+                    %a.text-black{:href => "ecom-product-detail.html"} Bananas Fruit
+                  %span.fs-12 Vitamin A, B, C
+                .text-center
+                  %span.d-block
+                    %svg{:fill => "none", :height => "9", :viewBox => "0 0 18 9", :width => "19"}
+                      %path{:d => "M9 0L0 9H18L9 0Z", :fill => "#6EC51E"}
+                  %span.d-block.fs-16.text-black.font-w600 #2
+            .media.border-bottom.py-3
+              %a{:href => "ecom-product-detail.html"}
+                = image_tag "content/content-menu-11.png", class: "rounded mr-3", :width => "50"
+                .pr-3.mr-auto.media-body
+                  %h6.fs-16.font-w600.mb-0
+                    %a.text-black{:href => "ecom-product-detail.html"} Orange Fruit
+                  %span.fs-12 Vitamin A, B, C
+                .text-center
+                  %span.d-block
+                    %svg{:fill => "none", :height => "9", :viewBox => "0 0 18 9", :width => "19"}
+                      %path{:d => "M9 9.00006L18 6.10352e-05H9L0 6.10352e-05L9 9.00006Z", :fill => "#C51E1E"}
+                  %span.d-block.fs-16.text-black.font-w600 #3
+            .media.border-bottom.py-3
+              %a{:href => "ecom-product-detail.html"}
+                = image_tag "content/content-menu-12.png", class: "rounded mr-3", :width => "50"
+                .pr-3.mr-auto.media-body
+                  %h6.fs-16.font-w600.mb-0
+                    %a.text-black{:href => "ecom-product-detail.html"} Grapes Fruit
+                  %span.fs-12 Vitamin A, B, C
+                .text-center
+                  %span.d-block
+                    %svg{:fill => "none", :height => "9", :viewBox => "0 0 18 9", :width => "19"}
+                      %path{:d => "M9 0L0 9H18L9 0Z", :fill => "#6EC51E"}
+                  %span.d-block.fs-16.text-black.font-w600 #4
+          .card-footer.text-center.border-0.pt-3.pb-4
+            %a#TrendingIngridients.text-warning.dz-load-more{:href => "javascript:void(0);", :rel => "ajax/trending-ingridients.html"} View more

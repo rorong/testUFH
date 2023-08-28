@@ -1,0 +1,51 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  date_of_birth: 2023-08-28
+  special_delivery: MyString
+  already_received: MyString
+  current_diagnosis: MyString
+  tnbc: false
+  diagnosis_date: 2023-08-28
+  hospital: MyString
+  oncologist_first_name: MyString
+  oncologist_last_name: MyString
+  learn_about: MyString
+  other: MyString
+  local: false
+  national: false
+  insurance: MyString
+  insurance_other: MyString
+  under_represented: one
+  approved: false
+  bilingual: false
+  grants: MyString
+  liability_release: false
+  publicity_release: false
+  notes: MyString
+
+two:
+  user: two
+  date_of_birth: 2023-08-28
+  special_delivery: MyString
+  already_received: MyString
+  current_diagnosis: MyString
+  tnbc: false
+  diagnosis_date: 2023-08-28
+  hospital: MyString
+  oncologist_first_name: MyString
+  oncologist_last_name: MyString
+  learn_about: MyString
+  other: MyString
+  local: false
+  national: false
+  insurance: MyString
+  insurance_other: MyString
+  under_represented: two
+  approved: false
+  bilingual: false
+  grants: MyString
+  liability_release: false
+  publicity_release: false
+  notes: MyString

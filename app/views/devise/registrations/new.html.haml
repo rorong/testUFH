@@ -1,0 +1,30 @@
+.container.h-100
+  .row.justify-content-center.h-100.align-items-center
+    .col-md-6.m-auto
+      .authincation-content.mt-5.mb-5
+        .row.no-gutters
+          .col-xl-12
+            .auth-form
+              %div.text-center
+                .mb-3
+                  =image_tag "logo-full.png"
+              %h4.text-center.mb-4.text-white Sign up your account
+              = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+                .form-group
+                  %label.mb-1.text-white
+                    %strong Email
+                  = f.email_field :email, class: "form-control mb-1", placeholder: "Email", autofocus: true, autocomplete: "Email"
+                .form-group
+                  %label.mb-1.text-white
+                    %strong Password
+                  = f.password_field :password, class: "form-control mb-1", placeholder: "Password", autofocus: true, autocomplete: "Password"
+                .form-group
+                  %label.mb-1.text-white
+                    %strong Password Confirmation
+                  = f.password_field :password_confirmation, class: "form-control mb-1", placeholder: "Password Confirmation", autofocus: true, autocomplete: "Password Confirmation"
+                .text-center.mt-4
+                  = f.submit 'Sign Up', data: {turbo: false}, class: ' btn bg-white text-warning btn-block'
+              .new-account.mt-3
+                %p.text-white
+                  Already have an account?
+                  = link_to "Sign In", new_user_session_path, class: "text-white ml-2"

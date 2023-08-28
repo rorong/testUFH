@@ -1,0 +1,55 @@
+.container-fluid
+  .row
+    =render "users/user_profile", user: current_user
+    =render "users/posts", posts: Post.latest
+
+    .col
+      .col-xl-12
+        .card
+          .card-body
+            .post-details
+              %h3.mb-2.text-black= @post.title
+              %ul.mb-4.post-meta.d-flex.flex-wrap
+                %li.post-author.mr-3 By #{@post.user.first_name}
+                %li.post-date.mr-3
+                  %i.fa.fa-calender>
+                  = @post.created_at.strftime("%I:%M %p")
+                %li.post-comment
+                  %i.fa.fa-comments-o
+                  = @post.reply_count || 28
+              - if @post.image.url.present?
+                =image_tag "#{@post.image.url}", class: "img-fluid mb-3"
+              - else
+                =image_tag "content/default-post.jpeg", class: "img-fluid mb-3"
+              %p= @post.text
+              .profile-skills.mt-5.mb-5
+                %h4.text-warning.mb-2 Skills
+                %a.btn.btn-warning.light.btn-xs.mb-1{:href => "javascript:void()"} Admin
+                %a.btn.btn-warning.light.btn-xs.mb-1{:href => "javascript:void()"} Dashboard
+                %a.btn.btn-warning.light.btn-xs.mb-1{:href => "javascript:void()"} Photoshop
+                %a.btn.btn-warning.light.btn-xs.mb-1{:href => "javascript:void()"} Bootstrap
+                %a.btn.btn-warning.light.btn-xs.mb-1{:href => "javascript:void()"} Responsive
+                %a.btn.btn-warning.light.btn-xs.mb-1{:href => "javascript:void()"} Crypto
+              #respond.comment-respond
+                %h4#reply-title.comment-reply-title.text-warning.mb-3 Leave a Reply
+                %form#commentform.comment-form{:method => "post"}
+                  .row
+                    .col-lg-6
+                      .form-group
+                        %label.text-black.font-w600{:for => "author"}
+                          Name
+                          %span.required *
+                        %input#author.form-control{:name => "Author", :placeholder => "Author", :type => "text", :value => "Author"}/
+                    .col-lg-6
+                      .form-group
+                        %label.text-black.font-w600{:for => "email"}
+                          Email
+                          %span.required *
+                        %input#email.form-control{:name => "Email", :placeholder => "Email", :type => "text", :value => "Email"}/
+                    .col-lg-12
+                      .form-group
+                        %label.text-black.font-w600{:for => "comment"} Comment
+                        %textarea#comment.form-control{:name => "comment", :placeholder => "Comment", :rows => "8"}
+                    .col-lg-12
+                      .form-group
+                        %input#submit.submit.btn.btn-warning{:name => "submit", :type => "submit", :value => "Post Comment"}/

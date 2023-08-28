@@ -1,0 +1,138 @@
+.container-fluid
+  .page-titles
+    %ol.breadcrumb
+      %li.breadcrumb-item
+        %a{:href => "javascript:void(0)"} Layout
+      %li.breadcrumb-item.active
+        %a{:href => "javascript:void(0)"} Blank
+  .row
+    .col-lg-12
+      .card
+        .card-body
+          .row
+            .col-xl-3.col-lg-6.col-md-6.col-xxl-5
+              / Tab panes
+              .tab-content
+                #first.tab-pane.fade.show.active{:role => "tabpanel"}
+                  =image_tag "content/course-1.jpg", class: "img-fluid"
+                #second.tab-pane.fade{:role => "tabpanel"}
+                  =image_tag "content/course-2.jpg", class: "img-fluid"
+                #third.tab-pane.fade{:role => "tabpanel"}
+                  =image_tag "content/course-3.jpg", class: "img-fluid"
+                #for.tab-pane.fade{:role => "tabpanel"}
+                  =image_tag "content/course-4.jpg", class: "img-fluid"
+              .tab-slide-content.new-arrival-product.mb-4.mb-xl-0
+                / Nav tabs
+                %ul.nav.slide-item-list.mt-3{:role => "tablist"}
+                  %li.show{:role => "presentation"}
+                    %a{"data-toggle" => "tab", :href => "#first", :role => "tab"}
+                      = image_tag "content/course-1.jpg", class: "img-fluid", :width => "50"
+                  %li{:role => "presentation"}
+                    %a{"data-toggle" => "tab", :href => "#second", :role => "tab"}
+                      = image_tag "content/course-2.jpg", class: "img-fluid", :width => "50"
+                  %li{:role => "presentation"}
+                    %a{"data-toggle" => "tab", :href => "#third", :role => "tab"}
+                      = image_tag "content/course-3.jpg", class: "img-fluid", :width => "50"
+                  %li{:role => "presentation"}
+                    %a{"data-toggle" => "tab", :href => "#for", :role => "tab"}
+                      = image_tag "content/course-4.jpg", class: "img-fluid", :width => "50"
+            / Tab slider End
+            .col-xl-9.col-lg-6.col-md-6.col-xxl-7.col-sm-12
+              .product-detail-content
+                / Product details
+                .new-arrival-content.pr
+                  %h4 Solid Women's V-neck Dark T-Shirt
+                  .comment-review.star-rating
+                    %ul
+                      %li
+                        %i.fa.fa-star
+                      %li
+                        %i.fa.fa-star
+                      %li
+                        %i.fa.fa-star
+                      %li
+                        %i.fa.fa-star-half-empty
+                      %li
+                        %i.fa.fa-star-half-empty
+                    %span.review-text (34 reviews) /
+                    %a.product-review{"data-target" => "#reviewModal", "data-toggle" => "modal", :href => ""} Write a review?
+                  .d-table.mb-2
+                    %p.price.float-left.d-block $325.00
+                  %p
+                    Availability:
+                    %span.item
+                      In stock
+                      %i.fa.fa-shopping-basket
+                  %p
+                    Product code:
+                    %span.item 0405689
+                  %p
+                    Brand:
+                    %span.item Lee
+                  %p
+                    Product tags:  
+                    %span.badge.badge-success.light bags
+                    %span.badge.badge-success.light clothes
+                    %span.badge.badge-success.light shoes
+                    %span.badge.badge-success.light dresses
+                  %p.text-content
+                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                    If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing.
+                  .filtaring-area.my-3
+                    .size-filter
+                      %h4.m-b-15 Select size
+                      .btn-group{"data-toggle" => "buttons"}
+                        %label.btn.btn-outline-primary.light.btn-sm
+                          %input#option5.position-absolute.invisible{:name => "options", :type => "radio"}/
+                          XS
+                        %label.btn.btn-outline-primary.light.btn-sm
+                          %input#option1.position-absolute.invisible{:checked => "checked", :name => "options", :type => "radio"}>/
+                          SM
+                        %label.btn.btn-outline-primary.light.btn-sm
+                          %input#option2.position-absolute.invisible{:name => "options", :type => "radio"}/
+                          MD
+                        %label.btn.btn-outline-primary.light.btn-sm
+                          %input#option3.position-absolute.invisible{:name => "options", :type => "radio"}/
+                          LG
+                        %label.btn.btn-outline-primary.light.btn-sm
+                          %input#option4.position-absolute.invisible{:name => "options", :type => "radio"}/
+                          XL
+                  / Quantity start
+                  .col-2.px-0
+                    %input.form-control.input-btn.input-number{:name => "num", :type => "number", :value => "1"}/
+                  / Quanatity End
+                  .shopping-cart.mt-3
+                    %a.btn.btn-warning.btn-lg{:href => "javascript:void(0)"}
+                      %i.fa.fa-shopping-basket.mr-2>
+                      Add
+                      to cart
+    / review
+    #reviewModal.modal.fade
+      .modal-dialog{:role => "document"}
+        .modal-content
+          .modal-header
+            %h5.modal-title Review
+            %button.close{"data-dismiss" => "modal", :type => "button"}
+              %span ×
+          .modal-body
+            %form
+              .text-center.mb-4
+                %img.img-fluid.rounded{:alt => "DexignZone", :src => "./images/avatar/1.jpg", :width => "78"}/
+              .form-group
+                .rating-widget.mb-4.text-center
+                  / Rating Stars Box
+                  .rating-stars
+                    %ul#stars
+                      %li.star{"data-value" => "1", :title => "Poor"}
+                        %i.fa.fa-star.fa-fw
+                      %li.star{"data-value" => "2", :title => "Fair"}
+                        %i.fa.fa-star.fa-fw
+                      %li.star{"data-value" => "3", :title => "Good"}
+                        %i.fa.fa-star.fa-fw
+                      %li.star{"data-value" => "4", :title => "Excellent"}
+                        %i.fa.fa-star.fa-fw
+                      %li.star{"data-value" => "5", :title => "WOW!!!"}
+                        %i.fa.fa-star.fa-fw
+              .form-group
+                %textarea.form-control{:placeholder => "Comment", :rows => "5"}
+              %button.btn.btn-success.btn-block RATE

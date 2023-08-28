@@ -1,0 +1,2 @@
+class GroceryGiftCard < ApplicationRecord
+end

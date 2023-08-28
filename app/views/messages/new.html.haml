@@ -1,0 +1,41 @@
+.container-fluid
+  .page-titles
+    %ol.breadcrumb
+      %li.breadcrumb-item
+        %a{:href => "javascript:void(0)"} Email
+      %li.breadcrumb-item.active
+        %a{:href => "javascript:void(0)"} Compose
+  / row
+  .row
+    .col-lg-12
+      .card
+        .card-body
+          .email-left-box.px-0.mb-3
+            .mail-list.mt-4
+              = link_to messages_path, method: :get, data:{ turbo: false }, class: "list-group-item active" do
+                %i.fa.fa-inbox.font-18.align-middle.mr-2
+                Inbox
+                %span.badge.badge-primary.badge-sm.float-right= @message_count
+              = link_to messages_path(sent: true), method: :get, data:{ turbo: false }, class: "list-group-item" do
+                %i.fa.fa-paper-plane.font-18.align-middle.mr-2>
+                Sent
+                %span.badge.badge-primary.badge-sm.float-right= @sent_message_count
+              %a.list-group-item{:href => "javascript:void()"}
+                %i.fa.fa-star-o.font-18.align-middle.mr-2>
+                Important
+                %span.badge.badge-danger.text-white.badge-sm.float-right
+          .email-right-box.ml-0.ml-sm-4.ml-sm-0.mt-4
+            .compose-content
+              =form_for @message do |f|
+                .form-group
+                  = select_tag :recipient_id, options_for_select(User.where("id <> ?", current_user.id).pluck(:email, :id)), include_blank: '-- Send To --', class: 'form-control bg-transparent', required: true
+                .form-group
+                  =f.text_field :title, class: "form-control bg-transparent", placeholder: "Title", required: true
+                .form-group
+                  =f.text_area :body, class: "textarea_editor form-control bg-transparent", placeholder: "Body", :rows => "15", required: true
+                .text-left.mt-4.mb-2
+                  = f.submit "Send", data: {turbo: false}, class: "btn btn-warning btn-sl-sm mr-2 text-white"
+                  = link_to messages_path, data: {turbo: false}, class: "btn btn-danger light btn-sl-sm mr-2" do
+                    %span.mr-2>
+                      %i.fa.fa-times{"aria-hidden" => "true"}
+                    Discard

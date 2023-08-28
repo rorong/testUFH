@@ -1,0 +1,61 @@
+.container-fluid
+  .page-titles
+    %ol.breadcrumb
+      %li.breadcrumb-item
+        %a{:href => "javascript:void(0)"} Message
+      %li.breadcrumb-item.active
+        %a{:href => "javascript:void(0)"} Read
+  / row
+  .row
+    .col-lg-12
+      .card
+        .card-body
+          .email-left-box.generic-width.px-0.mb-5
+            .mail-list.mt-4
+              = link_to messages_path, method: :get, data:{ turbo: false }, class: "list-group-item active" do
+                %i.fa.fa-inbox.font-18.align-middle.mr-2
+                Inbox
+                %span.badge.badge-primary.badge-sm.float-right= @message_count
+              = link_to messages_path(sent: true), method: :get, data:{ turbo: false }, class: "list-group-item" do
+                %i.fa.fa-paper-plane.font-18.align-middle.mr-2>
+                Sent
+                %span.badge.badge-primary.badge-sm.float-right= @sent_message_count
+              %a.list-group-item{:href => "javascript:void()"}
+                %i.fa.fa-star.font-18.align-middle.mr-2>
+                Important
+                %span.badge.badge-danger.badge-sm.text-white.float-right
+          .email-right-box.clear-both.ml-0.ml-sm-4.ml-sm-0
+            .row
+              .col-12
+                .right-box-padding
+                  .read-content
+                    .media.pt-3.d-sm-flex.d-block.justify-content-between
+                      .clearfix.mb-3.d-flex
+                        %img.mr-3.rounded
+                        - if @message.message_user.sender_user.present?
+                          - if @message.message_user.sender_user.avatar.url.present?
+                            =image_tag "#{@message.message_user.sender_user.avatar.url}", width: "50", class: 'mr-3 rounded'
+                          - else
+                            =image_tag "profile.svg", width: "50", class: 'rounded-circle img-fluid'
+                          .media-body.mr-2
+                            %h5.text-warning.mb-0.mt-1.d-flex
+                              = @message.message_user.sender_user.try(:first_name)
+                              = @message.message_user.sender_user.try(:last_name)
+                            %p.mb-0= @message.created_at.strftime("%d %B %Y")
+                        - else
+                          =image_tag "profile.svg", width: "50", class: 'rounded-circle img-fluid'
+                          .media-body.mr-2
+                            %h5.text-warning.mb-0.mt-1.d-flex Anonymous User
+                            %p.mb-0= @message.created_at.strftime("%d %B %Y")
+                    %hr/
+                    .media.mb-2.mt-3
+                      .media-body
+                        %span.pull-right= @message.created_at.strftime("%I:%M %p")
+                        %h5.my-1.text-warning= @message.title
+                        %p.read-content-email
+                          - if @message.message_user.recipient_user.present?
+                            To: #{@message.message_user.recipient_user.email}
+                          - else
+                            To: anonymous@anonymous.com
+                    .read-content-body
+                      %p.mb-2= @message.body

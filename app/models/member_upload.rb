@@ -1,0 +1,2 @@
+class MemberUpload < ApplicationRecord
+end
