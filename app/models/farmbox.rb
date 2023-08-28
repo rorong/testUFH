@@ -1,0 +1,2 @@
+class Farmbox < ApplicationRecord
+end

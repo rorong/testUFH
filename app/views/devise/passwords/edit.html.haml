@@ -1,0 +1,24 @@
+.container.h-100
+  .row.justify-content-center.h-100.align-items-center
+    .col-md-6.m-auto
+      .authincation-content.mt-5.mb-3
+        .row.no-gutters{ style: "margin-top:9rem; margin-bottom:6rem;" }
+          .col-xl-12
+            .auth-form
+              %div.text-center
+                .mb-3
+                  =image_tag "logo-full.png"
+              %h4.text-center.mb-4.text-white Change your password
+              = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f|
+                = render "devise/shared/error_messages", resource: resource
+                .form-group
+                  = f.hidden_field :reset_password_token
+                  = f.password_field :password, class: "form-control mb-1", placeholder: "New Password"
+                .form-group
+                  = f.password_field :password_confirmation, class: "form-control mb-1", placeholder: "Confirm New Password"
+                .text-center
+                  = f.submit 'Change my password', data: {turbo: false}, class: "btn bg-white text-warning btn-block"
+              / .new-account.mt-3
+              /   %p.text-white
+              /     Don't have an account?
+              /     = link_to 'Sign Up', new_user_registration_path, class: 'text-white ml-2'

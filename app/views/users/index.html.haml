@@ -1,0 +1,39 @@
+.container-fluid
+  .page-titles
+    %ol.breadcrumb
+      %li.breadcrumb-item
+        %a{:href => "javascript:void(0)"} Table
+      %li.breadcrumb-item.active
+        %a{:href => "javascript:void(0)"} Membership Directory
+  .row
+    .col-12
+      .card
+        .card-header
+          %h4.card-title Membership Directory
+        .card-body
+          .table-responsive
+            %table#example.display.min-w850
+              %thead
+                %tr
+                  %th Image
+                  %th First Name
+                  %th Last Name
+                  %th Email
+                  %th Member Since
+                  %th Action
+              %tbody
+                - @users.each do |user|
+                  %tr
+                    %td
+                      - if user.avatar.url.present?
+                        =image_tag "#{user.avatar.url}", :width => "35", :height => "35", class: 'rounded-circle'
+                      - else
+                        =image_tag "profile.svg", :width => "35", class: 'rounded-circle'
+                    %td= user.first_name
+                    %td= user.last_name
+                    %td= user.email
+                    %td= user.created_at.strftime("%d %B %Y")
+                    %td
+                      .d-flex
+                        = link_to user_path(user), data: {turbo: false}, class: "btn btn-warning shadow btn-xs sharp mr-1" do
+                          %i.fa.fa-eye.text-white

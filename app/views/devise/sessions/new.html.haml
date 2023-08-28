@@ -1,0 +1,33 @@
+.container.h-100
+  .row.justify-content-center.h-100.align-items-center
+    .col-md-6.m-auto
+      .authincation-content.mt-5.mb-3
+        .row.no-gutters
+          .col-xl-12
+            .auth-form
+              %div.text-center
+                .mb-3
+                  =image_tag "logo-full.png"
+              %h4.text-center.mb-4.text-white Sign in your account
+              = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+                .form-group
+                  %label.mb-1.text-white
+                    %strong Email
+                  = f.email_field :email, class: "form-control mb-1", placeholder: "Email"
+                .form-group
+                  %label.mb-1.text-white
+                    %strong Password
+                  = f.password_field :password, class: "form-control mb-1", placeholder: "Password"
+                .form-group
+                  - if devise_mapping.rememberable?
+                    .custom-checkbox.ml-4.text-white
+                      = f.check_box :remember_me, class: "custom-control-input", id:"basic_checkbox_1"
+                      = f.label :remember_me, class: "custom-control-label", id: 'black-label',for: "basic_checkbox_1"
+                      = link_to 'Forgot Password?', new_user_password_path, data: {turbo: false}, class: "text-white float-right"
+                .text-center
+                  = f.submit 'Log In', data: {turbo: false}, class: "btn bg-white text-warning btn-block"
+              .new-account.mt-3
+                %p.text-white
+                  Don't have an account?
+                  = link_to 'Sign Up', new_user_registration_path, class: 'text-white ml-2'
+

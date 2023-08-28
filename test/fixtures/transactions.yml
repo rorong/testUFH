@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  member_user_id: 1
+  provider_user_id: 1
+  service: one
+  Transaction: 2023-08-28 12:18:27
+  value: 1.5
+  provider_review: false
+  paid: false
+  square_count: 1
+  note: MyText
+
+two:
+  member_user_id: 1
+  provider_user_id: 1
+  service: two
+  Transaction: 2023-08-28 12:18:27
+  value: 1.5
+  provider_review: false
+  paid: false
+  square_count: 1
+  note: MyText

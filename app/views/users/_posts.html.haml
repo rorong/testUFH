@@ -1,0 +1,28 @@
+.col-xl-4
+  .card
+    .card-body
+      .profile-news
+        %h5.text-warning.d-inline Posts
+        - posts.each do |post|
+          .media.pt-3.pb-3
+            - if post.image.url.present?
+              =image_tag "#{post.image.url}", class: "mr-3 rounded", width:"75", height:"75"
+            - else
+              =image_tag "content/default-post.jpeg", class: "mr-3 rounded", width:"75", height:"75"
+
+            .media-body
+              %h5.m-b-5= link_to post.title, post.link, class: "text-black", target: "_blank", data: {turbo: false}
+              %p.mb-0= post.text
+
+        / .media.pt-3.pb-3
+        /   =image_tag "profile/profile-6.jpeg", class: "mr-3 rounded", width:"75"
+        /   .media-body
+        /     %h5.m-b-5
+        /       %a.text-black{:href => "{!! url('/post-details'); !!}"} Collection of textile samples
+        /     %p.mb-0 I shared this on my fb wall a few months back, and I thought.
+        / .media.pt-3.pb-3
+        /   =image_tag "profile/profile-7.jpeg", class: "mr-3 rounded", width:"75"
+        /   .media-body
+        /     %h5.m-b-5
+        /       %a.text-black{:href => "{!! url('/post-details'); !!}"} Collection of textile samples
+        /     %p.mb-0 I shared this on my fb wall a few months back, and I thought.

@@ -1,0 +1,2 @@
+class TransactionUpload < ApplicationRecord
+end

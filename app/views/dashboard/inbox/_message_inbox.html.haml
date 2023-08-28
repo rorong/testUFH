@@ -1,0 +1,351 @@
+.container-fluid
+  .page-titles
+    %ol.breadcrumb
+      %li.breadcrumb-item
+        %a{:href => "javascript:void(0)"} Email
+      %li.breadcrumb-item.active
+        %a{:href => "javascript:void(0)"} Inbox
+  / row
+  .row
+    .col-lg-12
+      .card
+        .card-body
+          .email-left-box.px-0.mb-3
+            .p-0
+              %a.btn.btn-warning.btn-block{:href => "email-compose.html"} Compose
+            .mail-list.mt-4
+              %a.list-group-item.active{:href => "email-inbox.html"}
+                %i.fa.fa-inbox.font-18.align-middle.mr-2
+                Inbox
+                %span.badge.badge-primary.badge-sm.float-right 198
+              %a.list-group-item{:href => "javascript:void()"}
+                %i.fa.fa-paper-plane.font-18.align-middle.mr-2>
+                Sent
+              %a.list-group-item{:href => "javascript:void()"}
+                %i.fa.fa-star.font-18.align-middle.mr-2>
+                Important
+                %span.badge.badge-danger.text-white.badge-sm.float-right 47
+              %a.list-group-item{:href => "javascript:void()"}
+                %i.mdi.mdi-file-document-box.font-18.align-middle.mr-2>
+                Draft
+              %a.list-group-item{:href => "javascript:void()"}
+                %i.fa.fa-trash.font-18.align-middle.mr-2>
+                Trash
+            .intro-title.d-flex.justify-content-between
+              %h5 Categories
+              %i.icon-arrow-down{"aria-hidden" => "true"}
+            .mail-list.mt-4
+              %a.list-group-item{:href => "email-inbox.html"}
+                %span.icon-warning
+                  %i.fa.fa-circle{"aria-hidden" => "true"}
+                Work
+              %a.list-group-item{:href => "email-inbox.html"}
+                %span.icon-primary
+                  %i.fa.fa-circle{"aria-hidden" => "true"}
+                Private
+              %a.list-group-item{:href => "email-inbox.html"}
+                %span.icon-success
+                  %i.fa.fa-circle{"aria-hidden" => "true"}
+                Support
+              %a.list-group-item{:href => "email-inbox.html"}
+                %span.icon-dpink
+                  %i.fa.fa-circle{"aria-hidden" => "true"}
+                Social
+          .email-right-box.ml-0.ml-sm-4.ml-sm-0
+            .toolbar.ml-1.ml-sm-0{:role => "toolbar"}
+              .btn-group.mb-1
+                .custom-control.custom-checkbox.pl-2
+                  %input#checkAll.custom-control-input{:type => "checkbox"}/
+                  %label.custom-control-label{:for => "checkAll"}
+              .btn-group.mb-1
+                %button.btn.btn-warning.light.px-3{:type => "button"}
+                  %i.ti-reload
+              .btn-group.mb-1
+                %button.btn.btn-warning.px-3.light.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :type => "button"}
+                  More
+                  %span.caret
+                .dropdown-menu
+                  %a.dropdown-item{:href => "javascript: void(0);"} Mark as Unread
+                  %a.dropdown-item{:href => "javascript: void(0);"} Add to Tasks
+                  %a.dropdown-item{:href => "javascript: void(0);"} Add Star
+                  %a.dropdown-item{:href => "javascript: void(0);"} Mute
+            .email-list.mt-3
+              .message
+                %div
+                  .d-flex.message-single
+                    .pl-1.align-self-center
+                      .custom-control.custom-checkbox
+                        %input#checkbox2.custom-control-input{:type => "checkbox"}/
+                        %label.custom-control-label{:for => "checkbox2"}
+                    .ml-2
+                      %button.border-0.bg-transparent.align-middle.p-0
+                        %i.fa.fa-star{"aria-hidden" => "true"}
+                  %a.col-mail.col-mail-2{:href => "email-read.html"}
+                    .subject Ingredia Nutrisha, A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture
+                    .date 11:49 am
+              .message
+                %div
+                  .d-flex.message-single
+                    .pl-1.align-self-center
+                      .custom-control.custom-checkbox
+                        %input#checkbox3.custom-control-input{:type => "checkbox"}/
+                        %label.custom-control-label{:for => "checkbox3"}
+                    .ml-2
+                      %button.border-0.bg-transparent.align-middle.p-0
+                        %i.fa.fa-star{"aria-hidden" => "true"}
+                  %a.col-mail.col-mail-2{:href => "email-read.html"}
+                    .subject Almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+                    .date 11:49 am
+              .message
+                %div
+                  .d-flex.message-single
+                    .pl-1.align-self-center
+                      .custom-control.custom-checkbox
+                        %input#checkbox4.custom-control-input{:type => "checkbox"}/
+                        %label.custom-control-label{:for => "checkbox4"}
+                    .ml-2
+                      %button.border-0.bg-transparent.align-middle.p-0
+                        %i.fa.fa-star{"aria-hidden" => "true"}
+                  %a.col-mail.col-mail-2{:href => "email-read.html"}
+                    .subject Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of
+                    .date 11:49 am
+              .message
+                %div
+                  .d-flex.message-single
+                    .pl-1.align-self-center
+                      .custom-control.custom-checkbox
+                        %input#checkbox5.custom-control-input{:type => "checkbox"}/
+                        %label.custom-control-label{:for => "checkbox5"}
+                    .ml-2
+                      %button.border-0.bg-transparent.align-middle.p-0
+                        %i.fa.fa-star{"aria-hidden" => "true"}
+                  %a.col-mail.col-mail-2{:href => "email-read.html"}
+                    .subject Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of
+                    .date 11:49 am
+              .message
+                %div
+                  .d-flex.message-single
+                    .pl-1.align-self-center
+                      .custom-control.custom-checkbox
+                        %input#checkbox6.custom-control-input{:type => "checkbox"}/
+                        %label.custom-control-label{:for => "checkbox6"}
+                    .ml-2
+                      %button.border-0.bg-transparent.align-middle.p-0
+                        %i.fa.fa-star{"aria-hidden" => "true"}
+                  %a.col-mail.col-mail-2{:href => "email-read.html"}
+                    .subject Ingredia Nutrisha, A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture
+                    .date 11:49 am
+              .message
+                %div
+                  .d-flex.message-single
+                    .pl-1.align-self-center
+                      .custom-control.custom-checkbox
+                        %input#checkbox7.custom-control-input{:type => "checkbox"}/
+                        %label.custom-control-label{:for => "checkbox7"}
+                    .ml-2
+                      %button.border-0.bg-transparent.align-middle.p-0
+                        %i.fa.fa-star{"aria-hidden" => "true"}
+                  %a.col-mail.col-mail-2{:href => "email-read.html"}
+                    .subject Almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+                    .date 11:49 am
+              .message
+                %div
+                  .d-flex.message-single
+                    .pl-1.align-self-center
+                      .custom-control.custom-checkbox
+                        %input#checkbox8.custom-control-input{:type => "checkbox"}/
+                        %label.custom-control-label{:for => "checkbox8"}
+                    .ml-2
+                      %button.border-0.bg-transparent.align-middle.p-0
+                        %i.fa.fa-star{"aria-hidden" => "true"}
+                  %a.col-mail.col-mail-2{:href => "email-read.html"}
+                    .subject Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of
+                    .date 11:49 am
+              .message.unread
+                %div
+                  .d-flex.message-single
+                    .pl-1.align-self-center
+                      .custom-control.custom-checkbox
+                        %input#checkbox9.custom-control-input{:type => "checkbox"}/
+                        %label.custom-control-label{:for => "checkbox9"}
+                    .ml-2
+                      %button.border-0.bg-transparent.align-middle.p-0
+                        %i.fa.fa-star{"aria-hidden" => "true"}
+                  %a.col-mail.col-mail-2{:href => "email-read.html"}
+                    .subject Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of
+                    .date 11:49 am
+              .message.unread
+                %div
+                  .d-flex.message-single
+                    .pl-1.align-self-center
+                      .custom-control.custom-checkbox
+                        %input#checkbox10.custom-control-input{:type => "checkbox"}/
+                        %label.custom-control-label{:for => "checkbox10"}
+                    .ml-2
+                      %button.border-0.bg-transparent.align-middle.p-0
+                        %i.fa.fa-star{"aria-hidden" => "true"}
+                  %a.col-mail.col-mail-2{:href => "email-read.html"}
+                    .subject Ingredia Nutrisha, A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture
+                    .date 11:49 am
+              .message
+                %div
+                  .d-flex.message-single
+                    .pl-1.align-self-center
+                      .custom-control.custom-checkbox
+                        %input#checkbox11.custom-control-input{:type => "checkbox"}/
+                        %label.custom-control-label{:for => "checkbox11"}
+                    .ml-2
+                      %button.border-0.bg-transparent.align-middle.p-0
+                        %i.fa.fa-star{"aria-hidden" => "true"}
+                  %a.col-mail.col-mail-2{:href => "email-read.html"}
+                    .subject Almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+                    .date 11:49 am
+              .message
+                %div
+                  .d-flex.message-single
+                    .pl-1.align-self-center
+                      .custom-control.custom-checkbox
+                        %input#checkbox12.custom-control-input{:type => "checkbox"}/
+                        %label.custom-control-label{:for => "checkbox12"}
+                    .ml-2
+                      %button.border-0.bg-transparent.align-middle.p-0
+                        %i.fa.fa-star{"aria-hidden" => "true"}
+                  %a.col-mail.col-mail-2{:href => "email-read.html"}
+                    .subject Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of
+                    .date 11:49 am
+              .message
+                %div
+                  .d-flex.message-single
+                    .pl-1.align-self-center
+                      .custom-control.custom-checkbox
+                        %input#checkbox13.custom-control-input{:type => "checkbox"}/
+                        %label.custom-control-label{:for => "checkbox13"}
+                    .ml-2
+                      %button.border-0.bg-transparent.align-middle.p-0
+                        %i.fa.fa-star{"aria-hidden" => "true"}
+                  %a.col-mail.col-mail-2{:href => "email-read.html"}
+                    .subject Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of
+                    .date 11:49 am
+              .message
+                %div
+                  .d-flex.message-single
+                    .pl-1.align-self-center
+                      .custom-control.custom-checkbox
+                        %input#checkbox14.custom-control-input{:type => "checkbox"}/
+                        %label.custom-control-label{:for => "checkbox14"}
+                    .ml-2
+                      %button.border-0.bg-transparent.align-middle.p-0
+                        %i.fa.fa-star{"aria-hidden" => "true"}
+                  %a.col-mail.col-mail-2{:href => "email-read.html"}
+                    .subject Ingredia Nutrisha, A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture
+                    .date 11:49 am
+              .message.unread
+                %div
+                  .d-flex.message-single
+                    .pl-1.align-self-center
+                      .custom-control.custom-checkbox
+                        %input#checkbox15.custom-control-input{:type => "checkbox"}/
+                        %label.custom-control-label{:for => "checkbox15"}
+                    .ml-2
+                      %button.border-0.bg-transparent.align-middle.p-0
+                        %i.fa.fa-star{"aria-hidden" => "true"}
+                  %a.col-mail.col-mail-2{:href => "email-read.html"}
+                    .subject Almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+                    .date 11:49 am
+              .message
+                %div
+                  .d-flex.message-single
+                    .pl-1.align-self-center
+                      .custom-control.custom-checkbox
+                        %input#checkbox16.custom-control-input{:type => "checkbox"}/
+                        %label.custom-control-label{:for => "checkbox16"}
+                    .ml-2
+                      %button.border-0.bg-transparent.align-middle.p-0
+                        %i.fa.fa-star{"aria-hidden" => "true"}
+                  %a.col-mail.col-mail-2{:href => "email-read.html"}
+                    .subject Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of
+                    .date 11:49 am
+              .message
+                %div
+                  .d-flex.message-single
+                    .pl-1.align-self-center
+                      .custom-control.custom-checkbox
+                        %input#checkbox17.custom-control-input{:type => "checkbox"}/
+                        %label.custom-control-label{:for => "checkbox17"}
+                    .ml-2
+                      %button.border-0.bg-transparent.align-middle.p-0
+                        %i.fa.fa-star{"aria-hidden" => "true"}
+                  %a.col-mail.col-mail-2{:href => "email-read.html"}
+                    .subject Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of
+                    .date 11:49 am
+              .message
+                %div
+                  .d-flex.message-single
+                    .pl-1.align-self-center
+                      .custom-control.custom-checkbox
+                        %input#checkbox18.custom-control-input{:type => "checkbox"}/
+                        %label.custom-control-label{:for => "checkbox18"}
+                    .ml-2
+                      %button.border-0.bg-transparent.align-middle.p-0
+                        %i.fa.fa-star{"aria-hidden" => "true"}
+                  %a.col-mail.col-mail-2{:href => "email-read.html"}
+                    .subject Ingredia Nutrisha, A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture
+                    .date 11:49 am
+              .message
+                %div
+                  .d-flex.message-single
+                    .pl-1.align-self-center
+                      .custom-control.custom-checkbox
+                        %input#checkbox19.custom-control-input{:type => "checkbox"}/
+                        %label.custom-control-label{:for => "checkbox19"}
+                    .ml-2
+                      %button.border-0.bg-transparent.align-middle.p-0
+                        %i.fa.fa-star{"aria-hidden" => "true"}
+                  %a.col-mail.col-mail-2{:href => "email-read.html"}
+                    .subject Almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+                    .date 11:49 am
+              .message.unread
+                %div
+                  .d-flex.message-single
+                    .pl-1.align-self-center
+                      .custom-control.custom-checkbox
+                        %input#checkbox20.custom-control-input{:type => "checkbox"}/
+                        %label.custom-control-label{:for => "checkbox20"}
+                    .ml-2
+                      %button.border-0.bg-transparent.align-middle.p-0
+                        %i.fa.fa-star{"aria-hidden" => "true"}
+                  %a.col-mail.col-mail-2{:href => "email-read.html"}
+                    .subject Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of
+                    .date 11:49 am
+              .message
+                %div
+                  .d-flex.message-single
+                    .pl-1.align-self-center
+                      .custom-control.custom-checkbox
+                        %input#checkbox21.custom-control-input{:type => "checkbox"}/
+                        %label.custom-control-label{:for => "checkbox21"}
+                    .ml-2
+                      %button.border-0.bg-transparent.align-middle.p-0
+                        %i.fa.fa-star{"aria-hidden" => "true"}
+                  %a.col-mail.col-mail-2{:href => "email-read.html"}
+                    .subject Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of
+                    .date 11:49 am
+            / panel
+            .row.mt-4
+              .col-12.pl-3
+                %nav
+                  %ul.pagination.pagination-gutter.pagination-primary.pagination-sm.no-bg
+                    %li.page-item.page-indicator
+                      %a.page-link{:href => "javascript:void()"}
+                        %i.la.la-angle-left
+                    %li.page-item
+                      %a.page-link{:href => "javascript:void()"} 1
+                    %li.page-item.active
+                      %a.page-link{:href => "javascript:void()"} 2
+                    %li.page-item
+                      %a.page-link{:href => "javascript:void()"} 3
+                    %li.page-item
+                      %a.page-link{:href => "javascript:void()"} 4
+                    %li.page-item.page-indicator
+                      %a.page-link{:href => "javascript:void()"}
+                        %i.la.la-angle-right

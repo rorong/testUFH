@@ -1,0 +1,33 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  virtual_sessions: false
+  company: MyString
+  service: one
+  insurance_expiration: 2023-08-28 12:32:40
+  certification_name: MyString
+  certification: false
+  cert_expiration: 2023-08-28
+  training_class: 2023-08-28
+  notes: MyText
+  nickname: MyString
+  bilingual: MyString
+  bilingual_language: MyString
+  provider_agreement: false
+
+two:
+  user: two
+  virtual_sessions: false
+  company: MyString
+  service: two
+  insurance_expiration: 2023-08-28 12:32:40
+  certification_name: MyString
+  certification: false
+  cert_expiration: 2023-08-28
+  training_class: 2023-08-28
+  notes: MyText
+  nickname: MyString
+  bilingual: MyString
+  bilingual_language: MyString
+  provider_agreement: false

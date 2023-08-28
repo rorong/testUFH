@@ -1,0 +1,15 @@
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: ufh_production
+  pool: 5
+  username: postgres
+  password: 9927734396
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: ufh_development
+  pool: 5
+  username: postgres
+  password: 9927734396
+# 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

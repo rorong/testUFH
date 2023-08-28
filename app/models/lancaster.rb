@@ -1,0 +1,2 @@
+class Lancaster < ApplicationRecord
+end

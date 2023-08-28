@@ -1,0 +1,527 @@
+.container-fluid
+  .page-titles
+    %ol.breadcrumb
+      %li.breadcrumb-item
+        %a{:href => "javascript:void(0)"} Shop
+      %li.breadcrumb-item.active
+        %a{:href => "javascript:void(0)"} Product Order
+  .row
+    .col-lg-12
+      .card
+        .card-body
+          .table-responsive
+            %table.table.table-sm.mb-0.table-responsive-lg.text-black
+              %thead
+                %tr
+                  %th.align-middle
+                    .custom-control.custom-checkbox.ml-1
+                      %input#checkAll.custom-control-input{:type => "checkbox"}/
+                      %label.custom-control-label{:for => "checkAll"}
+                  %th.align-middle Order
+                  %th.align-middle.pr-7 Date
+                  %th.align-middle.minw200 Ship To
+                  %th.align-middle.text-right Status
+                  %th.align-middle.text-right Amount
+                  %th.no-sort
+              %tbody#orders
+                %tr.btn-reveal-trigger
+                  %td.py-2
+                    .custom-control.custom-checkbox.checkbox-success
+                      %input#checkbox.custom-control-input{:type => "checkbox"}/
+                      %label.custom-control-label{:for => "checkbox"}
+                  %td.py-2
+                    %a{:href => "#"}
+                      %strong #181
+                    by
+                    %strong
+                      Ricky
+                      Antony
+                    %br/
+                    %a{:href => "mailto:ricky@example.com"} ricky@example.com
+                  %td.py-2 20/04/2020
+                  %td.py-2
+                    Ricky Antony, 2392 Main Avenue, Penasauka, New Jersey 02149
+                    %p.mb-0.text-500 Via Flat Rate
+                  %td.py-2.text-right
+                    %span.badge.badge-success
+                      Completed
+                      %span.ml-1.fa.fa-check
+                  %td.py-2.text-right
+                    $99
+                  %td.py-2.text-right
+                    .dropdown.text-sans-serif
+                      %button#order-dropdown-0.btn.btn-warning.tp-btn-light.sharp{"aria-expanded" => "false", "aria-haspopup" => "true", "data-boundary" => "viewport", "data-toggle" => "dropdown", :type => "button"}
+                        %span
+                          %svg{:height => "18px", :version => "1.1", :viewbox => "0 0 24 24", :width => "18px", :xmlns => "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
+                            %g{:fill => "none", "fill-rule" => "evenodd", :stroke => "none", "stroke-width" => "1"}
+                              %rect{:height => "24", :width => "24", :x => "0", :y => "0"}
+                              %circle{:cx => "5", :cy => "12", :fill => "#000000", :r => "2"}
+                              %circle{:cx => "12", :cy => "12", :fill => "#000000", :r => "2"}
+                              %circle{:cx => "19", :cy => "12", :fill => "#000000", :r => "2"}
+                      .dropdown-menu.dropdown-menu-right.border.py-0{"aria-labelledby" => "order-dropdown-0"}
+                        .py-2
+                          %a.dropdown-item{:href => "#!"} Completed
+                          %a.dropdown-item{:href => "#!"} Processing
+                          %a.dropdown-item{:href => "#!"} On Hold
+                          %a.dropdown-item{:href => "#!"} Pending
+                          .dropdown-divider
+                          %a.dropdown-item.text-danger{:href => "#!"} Delete
+                %tr.btn-reveal-trigger
+                  %td.py-2
+                    .custom-control.custom-checkbox
+                      %input#checkbox1.custom-control-input{:type => "checkbox"}/
+                      %label.custom-control-label{:for => "checkbox1"}
+                  %td.py-2
+                    %a{:href => "#"}
+                      %strong #182
+                    by
+                    %strong Kin Rossow
+                    %br/
+                    %a{:href => "mailto:kin@example.com"} kin@example.com
+                  %td.py-2 20/04/2020
+                  %td.py-2
+                    Kin Rossow, 1 Hollywood Blvd,Beverly Hills, California 90210
+                    %p.mb-0.text-500
+                      Via Free Shipping
+                  %td.py-2.text-right
+                    %span.badge.badge-primary
+                      Processing
+                      %span.ml-1.fa.fa-redo
+                  %td.py-2.text-right
+                    $120
+                  %td.py-2.text-right
+                    .dropdown.text-sans-serif
+                      %button#order-dropdown-0.btn.btn-warning.tp-btn-light.sharp{"aria-expanded" => "false", "aria-haspopup" => "true", "data-boundary" => "viewport", "data-toggle" => "dropdown", :type => "button"}
+                        %span
+                          %svg{:height => "18px", :version => "1.1", :viewbox => "0 0 24 24", :width => "18px", :xmlns => "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
+                            %g{:fill => "none", "fill-rule" => "evenodd", :stroke => "none", "stroke-width" => "1"}
+                              %rect{:height => "24", :width => "24", :x => "0", :y => "0"}
+                              %circle{:cx => "5", :cy => "12", :fill => "#000000", :r => "2"}
+                              %circle{:cx => "12", :cy => "12", :fill => "#000000", :r => "2"}
+                              %circle{:cx => "19", :cy => "12", :fill => "#000000", :r => "2"}
+                      .dropdown-menu.dropdown-menu-right.border.py-0{"aria-labelledby" => "order-dropdown-0"}
+                        .py-2
+                          %a.dropdown-item{:href => "#!"} Completed
+                          %a.dropdown-item{:href => "#!"} Processing
+                          %a.dropdown-item{:href => "#!"} On Hold
+                          %a.dropdown-item{:href => "#!"} Pending
+                          .dropdown-divider
+                          %a.dropdown-item.text-danger{:href => "#!"} Delete
+                %tr.btn-reveal-trigger
+                  %td.py-2
+                    .custom-control.custom-checkbox.checkbox-secondary
+                      %input#checkbox2.custom-control-input{:type => "checkbox"}/
+                      %label.custom-control-label{:for => "checkbox2"}
+                  %td.py-2
+                    %a{:href => "#"}
+                      %strong #183
+                    by
+                    %strong
+                      Merry
+                      Diana
+                    %br/
+                    %a{:href => "mailto:merry@example.com"} merry@example.com
+                  %td.py-2 30/04/2020
+                  %td.py-2
+                    Merry Diana, 1 Infinite Loop, Cupertino, California 90210
+                    %p.mb-0.text-500 Via Link Road
+                  %td.py-2.text-right
+                    %span.badge.badge-secondary
+                      On
+                      Hold
+                      %span.ml-1.fa.fa-ban
+                  %td.py-2.text-right
+                    $70
+                  %td.py-2.text-right
+                    .dropdown.text-sans-serif
+                      %button#order-dropdown-0.btn.btn-warning.tp-btn-light.sharp{"aria-expanded" => "false", "aria-haspopup" => "true", "data-boundary" => "viewport", "data-toggle" => "dropdown", :type => "button"}
+                        %span
+                          %svg{:height => "18px", :version => "1.1", :viewbox => "0 0 24 24", :width => "18px", :xmlns => "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
+                            %g{:fill => "none", "fill-rule" => "evenodd", :stroke => "none", "stroke-width" => "1"}
+                              %rect{:height => "24", :width => "24", :x => "0", :y => "0"}
+                              %circle{:cx => "5", :cy => "12", :fill => "#000000", :r => "2"}
+                              %circle{:cx => "12", :cy => "12", :fill => "#000000", :r => "2"}
+                              %circle{:cx => "19", :cy => "12", :fill => "#000000", :r => "2"}
+                      .dropdown-menu.dropdown-menu-right.border.py-0{"aria-labelledby" => "order-dropdown-0"}
+                        .py-2
+                          %a.dropdown-item{:href => "#!"} Completed
+                          %a.dropdown-item{:href => "#!"} Processing
+                          %a.dropdown-item{:href => "#!"} On Hold
+                          %a.dropdown-item{:href => "#!"} Pending
+                          .dropdown-divider
+                          %a.dropdown-item.text-danger{:href => "#!"} Delete
+                %tr.btn-reveal-trigger
+                  %td.py-2
+                    .custom-control.custom-checkbox.checkbox-warning
+                      %input#checkbox3.custom-control-input{:type => "checkbox"}/
+                      %label.custom-control-label{:for => "checkbox3"}
+                  %td.py-2
+                    %a{:href => "#"}
+                      %strong #184
+                    by
+                    %strong
+                      Bucky
+                      Robert
+                    %br/
+                    %a{:href => "mailto:bucky@example.com"} bucky@example.com
+                  %td.py-2 30/04/2020
+                  %td.py-2
+                    Bucky Robert, 1 Infinite Loop, Cupertino, California 90210
+                    %p.mb-0.text-500 Via Free Shipping
+                  %td.py-2.text-right
+                    %span.badge.badge-warning
+                      Pending
+                      %span.ml-1.fas.fa-stream
+                  %td.py-2.text-right
+                    $92
+                  %td.py-2.text-right
+                    .dropdown.text-sans-serif
+                      %button#order-dropdown-0.btn.btn-warning.tp-btn-light.sharp{"aria-expanded" => "false", "aria-haspopup" => "true", "data-boundary" => "viewport", "data-toggle" => "dropdown", :type => "button"}
+                        %span
+                          %svg{:height => "18px", :version => "1.1", :viewbox => "0 0 24 24", :width => "18px", :xmlns => "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
+                            %g{:fill => "none", "fill-rule" => "evenodd", :stroke => "none", "stroke-width" => "1"}
+                              %rect{:height => "24", :width => "24", :x => "0", :y => "0"}
+                              %circle{:cx => "5", :cy => "12", :fill => "#000000", :r => "2"}
+                              %circle{:cx => "12", :cy => "12", :fill => "#000000", :r => "2"}
+                              %circle{:cx => "19", :cy => "12", :fill => "#000000", :r => "2"}
+                      .dropdown-menu.dropdown-menu-right.border.py-0{"aria-labelledby" => "order-dropdown-0"}
+                        .py-2
+                          %a.dropdown-item{:href => "#!"} Completed
+                          %a.dropdown-item{:href => "#!"} Processing
+                          %a.dropdown-item{:href => "#!"} On Hold
+                          %a.dropdown-item{:href => "#!"} Pending
+                          .dropdown-divider
+                          %a.dropdown-item.text-danger{:href => "#!"} Delete
+                %tr.btn-reveal-trigger
+                  %td.py-2
+                    .custom-control.custom-checkbox.checkbox-secondary
+                      %input#checkbox4.custom-control-input{:type => "checkbox"}/
+                      %label.custom-control-label{:for => "checkbox4"}
+                  %td.py-2
+                    %a{:href => "#"}
+                      %strong #185
+                    by
+                    %strong
+                      Rocky
+                      Zampa
+                    %br/
+                    %a{:href => "mailto:rocky@example.com"} rocky@example.com
+                  %td.py-2 30/04/2020
+                  %td.py-2
+                    Rocky Zampa, 1 Infinite Loop, Cupertino, California 90210
+                    %p.mb-0.text-500 Via Free Road
+                  %td.py-2.text-right
+                    %span.badge.badge-secondary
+                      On
+                      Hold
+                      %span.ml-1.fa.fa-ban
+                  %td.py-2.text-right
+                    $120
+                  %td.py-2.text-right
+                    .dropdown.text-sans-serif
+                      %button#order-dropdown-0.btn.btn-warning.tp-btn-light.sharp{"aria-expanded" => "false", "aria-haspopup" => "true", "data-boundary" => "viewport", "data-toggle" => "dropdown", :type => "button"}
+                        %span
+                          %svg{:height => "18px", :version => "1.1", :viewbox => "0 0 24 24", :width => "18px", :xmlns => "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
+                            %g{:fill => "none", "fill-rule" => "evenodd", :stroke => "none", "stroke-width" => "1"}
+                              %rect{:height => "24", :width => "24", :x => "0", :y => "0"}
+                              %circle{:cx => "5", :cy => "12", :fill => "#000000", :r => "2"}
+                              %circle{:cx => "12", :cy => "12", :fill => "#000000", :r => "2"}
+                              %circle{:cx => "19", :cy => "12", :fill => "#000000", :r => "2"}
+                      .dropdown-menu.dropdown-menu-right.border.py-0{"aria-labelledby" => "order-dropdown-0"}
+                        .py-2
+                          %a.dropdown-item{:href => "#!"} Completed
+                          %a.dropdown-item{:href => "#!"} Processing
+                          %a.dropdown-item{:href => "#!"} On Hold
+                          %a.dropdown-item{:href => "#!"} Pending
+                          .dropdown-divider
+                          %a.dropdown-item.text-danger{:href => "#!"} Delete
+                %tr.btn-reveal-trigger
+                  %td.py-2
+                    .custom-control.custom-checkbox
+                      %input#checkbox5.custom-control-input{:type => "checkbox"}/
+                      %label.custom-control-label{:for => "checkbox5"}
+                  %td.py-2
+                    %a{:href => "#"}
+                      %strong #186
+                    by
+                    %strong Ricky John
+                    %br/
+                    %a{:href => "mailto:ricky@example.com"} ricky@example.com
+                  %td.py-2 30/04/2020
+                  %td.py-2
+                    Ricky John, 1 Infinite Loop, Cupertino, California 90210
+                    %p.mb-0.text-500 Via Free Shipping
+                  %td.py-2.text-right
+                    %span.badge.badge-primary
+                      Processing
+                      %span.ml-1.fa.fa-redo
+                  %td.py-2.text-right
+                    $145
+                  %td.py-2.text-right
+                    .dropdown.text-sans-serif
+                      %button#order-dropdown-0.btn.btn-warning.tp-btn-light.sharp{"aria-expanded" => "false", "aria-haspopup" => "true", "data-boundary" => "viewport", "data-toggle" => "dropdown", :type => "button"}
+                        %span
+                          %svg{:height => "18px", :version => "1.1", :viewbox => "0 0 24 24", :width => "18px", :xmlns => "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
+                            %g{:fill => "none", "fill-rule" => "evenodd", :stroke => "none", "stroke-width" => "1"}
+                              %rect{:height => "24", :width => "24", :x => "0", :y => "0"}
+                              %circle{:cx => "5", :cy => "12", :fill => "#000000", :r => "2"}
+                              %circle{:cx => "12", :cy => "12", :fill => "#000000", :r => "2"}
+                              %circle{:cx => "19", :cy => "12", :fill => "#000000", :r => "2"}
+                      .dropdown-menu.dropdown-menu-right.border.py-0{"aria-labelledby" => "order-dropdown-0"}
+                        .py-2
+                          %a.dropdown-item{:href => "#!"} Completed
+                          %a.dropdown-item{:href => "#!"} Processing
+                          %a.dropdown-item{:href => "#!"} On Hold
+                          %a.dropdown-item{:href => "#!"} Pending
+                          .dropdown-divider
+                          %a.dropdown-item.text-danger{:href => "#!"} Delete
+                %tr.btn-reveal-trigger
+                  %td.py-2
+                    .custom-control.custom-checkbox.checkbox-success
+                      %input#checkbox6.custom-control-input{:type => "checkbox"}/
+                      %label.custom-control-label{:for => "checkbox6"}
+                  %td.py-2
+                    %a{:href => "#"}
+                      %strong #187
+                    by
+                    %strong
+                      Cristofer
+                      Henric
+                    %br/
+                    %a{:href => "mailto:cristofer@example.com"} cristofer@example.com
+                  %td.py-2 30/04/2020
+                  %td.py-2
+                    Cristofer Henric, 1 Infinite Loop, Cupertino, California 90210
+                    %p.mb-0.text-500
+                      Via Flat Rate
+                  %td.py-2.text-right
+                    %span.badge.badge-success
+                      Completed
+                      %span.ml-1.fa.fa-check
+                  %td.py-2.text-right
+                    $55
+                  %td.py-2.text-right
+                    .dropdown.text-sans-serif
+                      %button#order-dropdown-0.btn.btn-warning.tp-btn-light.sharp{"aria-expanded" => "false", "aria-haspopup" => "true", "data-boundary" => "viewport", "data-toggle" => "dropdown", :type => "button"}
+                        %span
+                          %svg{:height => "18px", :version => "1.1", :viewbox => "0 0 24 24", :width => "18px", :xmlns => "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
+                            %g{:fill => "none", "fill-rule" => "evenodd", :stroke => "none", "stroke-width" => "1"}
+                              %rect{:height => "24", :width => "24", :x => "0", :y => "0"}
+                              %circle{:cx => "5", :cy => "12", :fill => "#000000", :r => "2"}
+                              %circle{:cx => "12", :cy => "12", :fill => "#000000", :r => "2"}
+                              %circle{:cx => "19", :cy => "12", :fill => "#000000", :r => "2"}
+                      .dropdown-menu.dropdown-menu-right.border.py-0{"aria-labelledby" => "order-dropdown-0"}
+                        .py-2
+                          %a.dropdown-item{:href => "#!"} Completed
+                          %a.dropdown-item{:href => "#!"} Processing
+                          %a.dropdown-item{:href => "#!"} On Hold
+                          %a.dropdown-item{:href => "#!"} Pending
+                          .dropdown-divider
+                          %a.dropdown-item.text-danger{:href => "#!"} Delete
+                %tr.btn-reveal-trigger
+                  %td.py-2
+                    .custom-control.custom-checkbox.checkbox-secondary
+                      %input#checkbox7.custom-control-input{:type => "checkbox"}/
+                      %label.custom-control-label{:for => "checkbox7"}
+                  %td.py-2
+                    %a{:href => "#"}
+                      %strong #188
+                    by
+                    %strong Brate Lee
+                    %br/
+                    %a{:href => "mailto:lee@example.com"} lee@example.com
+                  %td.py-2 29/04/2020
+                  %td.py-2
+                    Brate Lee, 1 Infinite Loop, Cupertino, California 90210
+                    %p.mb-0.text-500 Via Link Road
+                  %td.py-2.text-right
+                    %span.badge.badge-secondary
+                      On
+                      Hold
+                      %span.ml-1.fa.fa-ban
+                  %td.py-2.text-right
+                    $90
+                  %td.py-2.text-right
+                    .dropdown.text-sans-serif
+                      %button#order-dropdown-0.btn.btn-warning.tp-btn-light.sharp{"aria-expanded" => "false", "aria-haspopup" => "true", "data-boundary" => "viewport", "data-toggle" => "dropdown", :type => "button"}
+                        %span
+                          %svg{:height => "18px", :version => "1.1", :viewbox => "0 0 24 24", :width => "18px", :xmlns => "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
+                            %g{:fill => "none", "fill-rule" => "evenodd", :stroke => "none", "stroke-width" => "1"}
+                              %rect{:height => "24", :width => "24", :x => "0", :y => "0"}
+                              %circle{:cx => "5", :cy => "12", :fill => "#000000", :r => "2"}
+                              %circle{:cx => "12", :cy => "12", :fill => "#000000", :r => "2"}
+                              %circle{:cx => "19", :cy => "12", :fill => "#000000", :r => "2"}
+                      .dropdown-menu.dropdown-menu-right.border.py-0{"aria-labelledby" => "order-dropdown-0"}
+                        .py-2
+                          %a.dropdown-item{:href => "#!"} Completed
+                          %a.dropdown-item{:href => "#!"} Processing
+                          %a.dropdown-item{:href => "#!"} On Hold
+                          %a.dropdown-item{:href => "#!"} Pending
+                          .dropdown-divider
+                          %a.dropdown-item.text-danger{:href => "#!"} Delete
+                %tr.btn-reveal-trigger
+                  %td.py-2
+                    .custom-control.custom-checkbox
+                      %input#checkbox8.custom-control-input{:type => "checkbox"}/
+                      %label.custom-control-label{:for => "checkbox8"}
+                  %td.py-2
+                    %a{:href => "#"}
+                      %strong #189
+                    by
+                    %strong
+                      Thomas
+                      Stephenson
+                    %br/
+                    %a{:href => "mailto:Stephenson@example.com"} Stephenson@example.com
+                  %td.py-2 29/04/2020
+                  %td.py-2
+                    Thomas Stephenson, 116 Ballifeary Road, Bamff
+                    %p.mb-0.text-500 Via Flat Rate
+                  %td.py-2.text-right
+                    %span.badge.badge-primary
+                      Processing
+                      %span.ml-1.fa.fa-redo
+                  %td.py-2.text-right
+                    $52
+                  %td.py-2.text-right
+                    .dropdown.text-sans-serif
+                      %button#order-dropdown-0.btn.btn-warning.tp-btn-light.sharp{"aria-expanded" => "false", "aria-haspopup" => "true", "data-boundary" => "viewport", "data-toggle" => "dropdown", :type => "button"}
+                        %span
+                          %svg{:height => "18px", :version => "1.1", :viewbox => "0 0 24 24", :width => "18px", :xmlns => "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
+                            %g{:fill => "none", "fill-rule" => "evenodd", :stroke => "none", "stroke-width" => "1"}
+                              %rect{:height => "24", :width => "24", :x => "0", :y => "0"}
+                              %circle{:cx => "5", :cy => "12", :fill => "#000000", :r => "2"}
+                              %circle{:cx => "12", :cy => "12", :fill => "#000000", :r => "2"}
+                              %circle{:cx => "19", :cy => "12", :fill => "#000000", :r => "2"}
+                      .dropdown-menu.dropdown-menu-right.border.py-0{"aria-labelledby" => "order-dropdown-0"}
+                        .py-2
+                          %a.dropdown-item{:href => "#!"} Completed
+                          %a.dropdown-item{:href => "#!"} Processing
+                          %a.dropdown-item{:href => "#!"} On Hold
+                          %a.dropdown-item{:href => "#!"} Pending
+                          .dropdown-divider
+                          %a.dropdown-item.text-danger{:href => "#!"} Delete
+                %tr.btn-reveal-trigger
+                  %td.py-2
+                    .custom-control.custom-checkbox.checkbox-success
+                      %input#checkbox9.custom-control-input{:type => "checkbox"}/
+                      %label.custom-control-label{:for => "checkbox9"}
+                  %td.py-2
+                    %a{:href => "#"}
+                      %strong #190
+                    by
+                    %strong Evie Singh
+                    %br/
+                    %a{:href => "mailto:eviewsing@example.com"} eviewsing@example.com
+                  %td.py-2 29/04/2020
+                  %td.py-2
+                    Evie Singh, 54 Castledore Road, Tunstead
+                    %p.mb-0.text-500 Via Flat Rate
+                  %td.py-2.text-right
+                    %span.badge.badge-success
+                      Completed
+                      %span.ml-1.fa.fa-check
+                  %td.py-2.text-right
+                    $90
+                  %td.py-2.text-right
+                    .dropdown.text-sans-serif
+                      %button#order-dropdown-0.btn.btn-warning.tp-btn-light.sharp{"aria-expanded" => "false", "aria-haspopup" => "true", "data-boundary" => "viewport", "data-toggle" => "dropdown", :type => "button"}
+                        %span
+                          %svg{:height => "18px", :version => "1.1", :viewbox => "0 0 24 24", :width => "18px", :xmlns => "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
+                            %g{:fill => "none", "fill-rule" => "evenodd", :stroke => "none", "stroke-width" => "1"}
+                              %rect{:height => "24", :width => "24", :x => "0", :y => "0"}
+                              %circle{:cx => "5", :cy => "12", :fill => "#000000", :r => "2"}
+                              %circle{:cx => "12", :cy => "12", :fill => "#000000", :r => "2"}
+                              %circle{:cx => "19", :cy => "12", :fill => "#000000", :r => "2"}
+                      .dropdown-menu.dropdown-menu-right.border.py-0{"aria-labelledby" => "order-dropdown-0"}
+                        .py-2
+                          %a.dropdown-item{:href => "#!"} Completed
+                          %a.dropdown-item{:href => "#!"} Processing
+                          %a.dropdown-item{:href => "#!"} On Hold
+                          %a.dropdown-item{:href => "#!"} Pending
+                          .dropdown-divider
+                          %a.dropdown-item.text-danger{:href => "#!"} Delete
+                %tr.btn-reveal-trigger
+                  %td.py-2
+                    .custom-control.custom-checkbox.checkbox-success
+                      %input#checkbox10.custom-control-input{:type => "checkbox"}/
+                      %label.custom-control-label{:for => "checkbox10"}
+                  %td.py-2
+                    %a{:href => "#"}
+                      %strong #191
+                    by
+                    %strong
+                      David
+                      Peters
+                    %br/
+                    %a{:href => "mailto:peter@example.com"} peter@example.com
+                  %td.py-2 29/04/2020
+                  %td.py-2
+                    David Peters, Rhyd Y Groes, Rhosgoch, LL66 0AT
+                    %p.mb-0.text-500 Via Link Road
+                  %td.py-2.text-right
+                    %span.badge.badge-success
+                      Completed
+                      %span.ml-1.fa.fa-check
+                  %td.py-2.text-right
+                    $69
+                  %td.py-2.text-right
+                    .dropdown.text-sans-serif
+                      %button#order-dropdown-0.btn.btn-warning.tp-btn-light.sharp{"aria-expanded" => "false", "aria-haspopup" => "true", "data-boundary" => "viewport", "data-toggle" => "dropdown", :type => "button"}
+                        %span
+                          %svg{:height => "18px", :version => "1.1", :viewbox => "0 0 24 24", :width => "18px", :xmlns => "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
+                            %g{:fill => "none", "fill-rule" => "evenodd", :stroke => "none", "stroke-width" => "1"}
+                              %rect{:height => "24", :width => "24", :x => "0", :y => "0"}
+                              %circle{:cx => "5", :cy => "12", :fill => "#000000", :r => "2"}
+                              %circle{:cx => "12", :cy => "12", :fill => "#000000", :r => "2"}
+                              %circle{:cx => "19", :cy => "12", :fill => "#000000", :r => "2"}
+                      .dropdown-menu.dropdown-menu-right.border.py-0{"aria-labelledby" => "order-dropdown-0"}
+                        .py-2
+                          %a.dropdown-item{:href => "#!"} Completed
+                          %a.dropdown-item{:href => "#!"} Processing
+                          %a.dropdown-item{:href => "#!"} On Hold
+                          %a.dropdown-item{:href => "#!"} Pending
+                          .dropdown-divider
+                          %a.dropdown-item.text-danger{:href => "#!"} Delete
+                %tr.btn-reveal-trigger
+                  %td.py-2
+                    .custom-control.custom-checkbox
+                      %input#checkbox11.custom-control-input{:type => "checkbox"}/
+                      %label.custom-control-label{:for => "checkbox11"}
+                  %td.py-2
+                    %a{:href => "#"}
+                      %strong #192
+                    by
+                    %strong
+                      Jennifer
+                      Johnson
+                    %br/
+                    %a{:href => "mailto:jennifer@example.com"} jennifer@example.com
+                  %td.py-2 28/04/2020
+                  %td.py-2
+                    Jennifer Johnson, Rhyd Y Groes, Rhosgoch, LL66 0AT
+                    %p.mb-0.text-500 Via Flat Rate
+                  %td.py-2.text-right
+                    %span.badge.badge-primary
+                      Processing
+                      %span.ml-1.fa.fa-redo
+                  %td.py-2.text-right
+                    $112
+                  %td.py-2.text-right
+                    .dropdown.text-sans-serif
+                      %button#order-dropdown-0.btn.btn-warning.tp-btn-light.sharp{"aria-expanded" => "false", "aria-haspopup" => "true", "data-boundary" => "viewport", "data-toggle" => "dropdown", :type => "button"}
+                        %span
+                          %svg{:height => "18px", :version => "1.1", :viewbox => "0 0 24 24", :width => "18px", :xmlns => "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
+                            %g{:fill => "none", "fill-rule" => "evenodd", :stroke => "none", "stroke-width" => "1"}
+                              %rect{:height => "24", :width => "24", :x => "0", :y => "0"}
+                              %circle{:cx => "5", :cy => "12", :fill => "#000000", :r => "2"}
+                              %circle{:cx => "12", :cy => "12", :fill => "#000000", :r => "2"}
+                              %circle{:cx => "19", :cy => "12", :fill => "#000000", :r => "2"}
+                      .dropdown-menu.dropdown-menu-right.border.py-0{"aria-labelledby" => "order-dropdown-0"}
+                        .py-2
+                          %a.dropdown-item{:href => "#!"} Completed
+                          %a.dropdown-item{:href => "#!"} Processing
+                          %a.dropdown-item{:href => "#!"} On Hold
+                          %a.dropdown-item{:href => "#!"} Pending
+                          .dropdown-divider
+                          %a.dropdown-item.text-danger{:href => "#!"} Delete

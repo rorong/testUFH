@@ -1,0 +1,42 @@
+.col-lg-12
+  .profile.card.card-body.px-3.pt-3.pb-0
+    .profile-head
+      .photo-content
+        .cover-photo
+          / %img(src="https://gymove.dexignzone.com/xhtml/images/profile/cover.jpg"){style:"background-size: cover;background-position: center;min-height: 250px;width: 100%;"}
+      .profile-info
+        .profile-photo
+          - if user.avatar.url.present?
+            =image_tag "#{user.avatar.url}", class: 'rounded-circle img-fluid'
+          - else
+            =image_tag "profile/default-profile.png", class: 'rounded-circle img-fluid'
+        .profile-details
+          .profile-name.px-3.pt-2
+            %h4.text-warning.mb-0
+              =user.first_name
+              =user.last_name
+            / %p UX / UI Designer
+          .profile-email.px-2.pt-2
+            %h4.text-muted.mb-0=user.email
+            %p Email
+          .dropdown.ml-auto
+            %a.btn.btn-warning.light.sharp{"aria-expanded" => "true", "data-toggle" => "dropdown", :href => "#"}
+              %svg{:height => "18px", :version => "1.1", :viewbox => "0 0 24 24", :width => "18px", :xmlns => "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
+                %g{:fill => "none", "fill-rule" => "evenodd", :stroke => "none", "stroke-width" => "1"}
+                  %rect{:height => "24", :width => "24", :x => "0", :y => "0"}
+                  %circle{:cx => "5", :cy => "12", :fill => "#000000", :r => "2"}
+                  %circle{:cx => "12", :cy => "12", :fill => "#000000", :r => "2"}
+                  %circle{:cx => "19", :cy => "12", :fill => "#000000", :r => "2"}
+            %ul.dropdown-menu.dropdown-menu-right
+              %li.dropdown-item
+                %i.fa.fa-user-circle.text-warning.mr-2
+                View profile
+              %li.dropdown-item
+                %i.fa.fa-users.text-warning.mr-2
+                Add to close friends
+              %li.dropdown-item
+                %i.fa.fa-plus.text-warning.mr-2
+                Add to group
+              %li.dropdown-item
+                %i.fa.fa-ban.text-warning.mr-2
+                Block

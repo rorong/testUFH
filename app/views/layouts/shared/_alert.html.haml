@@ -1,0 +1,11 @@
+%div#my-alert
+  - if notice
+    .alert.alert-success.alert-dismissible.fade.show.m-1{:role => "alert"}
+      = notice
+      %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+        %span{"aria-hidden" => "true"} ×
+  - if alert
+    .alert.alert-danger.alert-dismissible.fade.show.m-1{:role => "alert"}
+      = alert
+      %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+        %span{"aria-hidden" => "true"} ×

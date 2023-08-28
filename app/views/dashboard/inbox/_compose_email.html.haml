@@ -1,0 +1,112 @@
+.container-fluid
+  .page-titles
+    %ol.breadcrumb
+      %li.breadcrumb-item
+        %a{:href => "javascript:void(0)"} Email
+      %li.breadcrumb-item.active
+        %a{:href => "javascript:void(0)"} Compose
+  / row
+  .row
+    .col-lg-12
+      .card
+        .card-body
+          .email-left-box.px-0.mb-3
+            .p-0
+              %a.btn.btn-warning.btn-block{:href => "email-compose.html"} Compose
+            .mail-list.mt-4
+              %a.list-group-item.active{:href => "email-inbox.html"}
+                %i.fa.fa-inbox.font-18.align-middle.mr-2
+                Inbox
+                %span.badge.badge-primary.badge-sm.float-right 198
+              %a.list-group-item{:href => "javascript:void()"}
+                %i.fa.fa-paper-plane.font-18.align-middle.mr-2>
+                Sent
+              %a.list-group-item{:href => "javascript:void()"}
+                %i.fa.fa-star-o.font-18.align-middle.mr-2>
+                Important
+                %span.badge.badge-danger.text-white.badge-sm.float-right 47
+              %a.list-group-item{:href => "javascript:void()"}
+                %i.mdi.mdi-file-document-box.font-18.align-middle.mr-2>
+                Draft
+              %a.list-group-item{:href => "javascript:void()"}
+                %i.fa.fa-trash.font-18.align-middle.mr-2>
+                Trash
+            .intro-title.d-flex.justify-content-between
+              %h5 Categories
+              %i.fa.fa-chevron-down{"aria-hidden" => "true"}
+            .mail-list.mt-4
+              %a.list-group-item{:href => "email-inbox.html"}
+                %span.icon-warning
+                  %i.fa.fa-circle{"aria-hidden" => "true"}
+                Work
+              %a.list-group-item{:href => "email-inbox.html"}
+                %span.icon-primary
+                  %i.fa.fa-circle{"aria-hidden" => "true"}
+                Private
+              %a.list-group-item{:href => "email-inbox.html"}
+                %span.icon-success
+                  %i.fa.fa-circle{"aria-hidden" => "true"}
+                Support
+              %a.list-group-item{:href => "email-inbox.html"}
+                %span.icon-dpink
+                  %i.fa.fa-circle{"aria-hidden" => "true"}
+                Social
+          .email-right-box.ml-0.ml-sm-4.ml-sm-0
+            .toolbar.mb-4{:role => "toolbar"}
+              .btn-group.mb-1
+                %button.btn.btn-warning.light.px-3{:type => "button"}
+                  %i.fa.fa-archive
+                %button.btn.btn-warning.light.px-3{:type => "button"}
+                  %i.fa.fa-exclamation-circle
+                %button.btn.btn-warning.light.px-3{:type => "button"}
+                  %i.fa.fa-trash
+              .btn-group.mb-1
+                %button.btn.btn-warning.light.dropdown-toggle.px-3{"data-toggle" => "dropdown", :type => "button"}
+                  %i.fa.fa-folder
+                  %b.caret.m-l-5
+                .dropdown-menu
+                  %a.dropdown-item{:href => "javascript: void(0);"} Social
+                  %a.dropdown-item{:href => "javascript: void(0);"} Promotions
+                  %a.dropdown-item{:href => "javascript: void(0);"} Updates
+                  %a.dropdown-item{:href => "javascript: void(0);"} Forums
+              .btn-group.mb-1
+                %button.btn.btn-warning.light.dropdown-toggle.px-3{"data-toggle" => "dropdown", :type => "button"}
+                  %i.fa.fa-tag
+                  %b.caret.m-l-5
+                .dropdown-menu
+                  %a.dropdown-item{:href => "javascript: void(0);"} Updates
+                  %a.dropdown-item{:href => "javascript: void(0);"} Social
+                  %a.dropdown-item{:href => "javascript: void(0);"} Promotions
+                  %a.dropdown-item{:href => "javascript: void(0);"} Forums
+              .btn-group.mb-1
+                %button.btn.btn-warning.light.dropdown-toggle.v{"data-toggle" => "dropdown", :type => "button"}
+                  More
+                  %span.caret.m-l-5
+                .dropdown-menu
+                  %a.dropdown-item{:href => "javascript: void(0);"} Mark as Unread
+                  %a.dropdown-item{:href => "javascript: void(0);"} Add to Tasks
+                  %a.dropdown-item{:href => "javascript: void(0);"} Add Star
+                  %a.dropdown-item{:href => "javascript: void(0);"} Mute
+            .compose-content
+              %form{:action => "#"}
+                .form-group
+                  %input.form-control.bg-transparent{:placeholder => " To:", :type => "text"}/
+                .form-group
+                  %input.form-control.bg-transparent{:placeholder => " Subject:", :type => "text"}/
+                .form-group
+                  %textarea#email-compose-editor.textarea_editor.form-control.bg-transparent{:placeholder => "Enter text ...", :rows => "15"}
+              %h5.mb-4
+                %i.fa.fa-paperclip
+                Attatchment
+              %form.dropzone{:action => "#"}
+                .fallback
+                  %input{:multiple => "multiple", :name => "file", :type => "file"}/
+            .text-left.mt-4.mb-2
+              %button.btn.btn-warning.btn-sl-sm.mr-2{:type => "button"}
+                %span.mr-2>
+                  %i.fa.fa-paper-plane
+                Send
+              %button.btn.btn-danger.light.btn-sl-sm{:type => "button"}
+                %span.mr-2>
+                  %i.fa.fa-times{"aria-hidden" => "true"}
+                Discard
